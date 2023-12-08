@@ -35,12 +35,18 @@
                 <p>"Old Town Road" is the debut mainstream single by American rapper Lil Nas X, first released independently in December 2018</p>
             </div>
             <!-- ... -->
-
+            <!--卡片模版-->
+            <!-- <div class="card">
+                <img src="" alt="" class="card-image" onclick="showDetail(event)">
+                <h3></h3> 
+                <h5></h5>
+                <p></p>
+            </div> -->
             <div class="card">
                 <img src="asset/image/Baby_cover.jpeg" alt="Baby" class="card-image" onclick="showDetail(event)">
                 <h3>Baby</h3> 
                 <h5>Justin Bieber</h5>
-                <p>"Old Town Road" is the debut mainstream single by American rapper Lil Nas X, first released independently in December 2018</p>
+                <p>"Baby" is a song by Canadian singer Justin Bieber featuring American rapper Ludacris. It was released as the lead single on Bieber's debut studio album, My World 2.0. The track was written by the artists alongside Christina Milian and producers Tricky Stewart and The-Dream.</p>
             </div>
 
             <div class="card">
@@ -50,6 +56,26 @@
                 <p>"The song is based on the correspondence between Stan and Eminem, with the first three verses being letters from Stan to Eminem and the last verse being letters from Eminem to Stan. The song includes Dido's melancholic female vocals and Eminem's heavily nasal rapping.</p>
             </div>
 
+            <div class="card">
+                <img src="asset/image/Rolling_in_the_Deep_cover.png" alt="Rolling In the Deep" class="card-image" onclick="showDetail(event)">
+                <h3>Rolling In the Deep</h3> 
+                <h5>Adele</h5>
+                <p>"Rolling in the Deep" is a song by English singer-songwriter Adele from her second studio album, 21 (2011). It is the lead single and opening track on the album. The song was written by Adele and Paul Epworth. </p>
+            </div>
+
+            <div class="card">
+                <img src="asset/image/Everybody Dies In Their Nightmares_cover.jpeg" alt="Everybody Dies In Their Nightmares" class="card-image" onclick="showDetail(event)">
+                <h3>Everybody Dies In Their Nightmares</h3> 
+                <h5>XXXTENTACION</h5>
+                <p>"Everybody Dies in Their Nightmares" is a song by American rapper XXXTentacion from his debut studio album 17 (2017). It was produced by Potsu.</p>
+            </div>
+
+            <div class="card">
+                <img src="asset/image/see_youn_down_cover.webp" alt="See You Down" class="card-image" onclick="showDetail(event)">
+                <h3>See You Down</h3> 
+                <h5>Queen Omega & Lions Flow</h5>
+                <p>With vibrant music, Queen Omega invites us to have a positive attitude no matter what and to stay awake to avoid being dragged down further. She sings for all the people who may feel down to keep shining in the dark, to continue smiling and fighting.</p>
+            </div>
         </div>
     </section>
 </main>
@@ -57,11 +83,11 @@
 <footer>
     <p>&copy; 2023 Musicane. All rights reserved.</p>
 </footer>
-
+<!--模态框显示歌曲详情-->
 <div id="modal-container">
     <div id="modal-content">
       <span id="close-modal" onclick="closeModal()">&times;</span>
-      <h4 id="modal-title"></h4>
+      <h2 id="modal-title"></h2>
       <p id="modal-artist"></p>
       <p id="modal-description"></p>
     </div>
