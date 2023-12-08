@@ -71,9 +71,9 @@ main {
 
 .card-image {
     width: 100%; /* Ensures the image is as wide as the card */
-    height: auto; /* Maintains the aspect ratio of the image */
-    border-radius: 10px; /* Rounds the corners like the card */
-    object-fit: cover; /* This will cover the area without stretching the image */
+    height: 200px; /* Fixes the height of the image */
+    border-radius: 10px; /* Rounds the corners of the image */
+    object-fit: cover; /* Covers the area without stretching the image, cropping if necessary */
 }
 
 footer {
