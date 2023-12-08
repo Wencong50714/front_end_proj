@@ -22,20 +22,16 @@ function closeModal() {
 function startAutoScroll() {
   const container = document.querySelector('.card-container');
   let scrollAmount = 0;
-  let cardWidth = container.querySelector('.card').offsetWidth; // 获取卡片宽度
 
   function step() {
       // 每次调用时滚动的距离
       container.scrollLeft += 1;
       scrollAmount += 1;
 
-      // 检查是否滚动到最后一个卡片的一部分
-      if (scrollAmount >= cardWidth) {
-          // 将第一个卡片移动到末尾
-          const firstCard = container.querySelector('.card');
-          container.appendChild(firstCard);
-          container.scrollLeft -= firstCard.offsetWidth;
-          scrollAmount -= cardWidth;
+      // 如果滚动到了末尾，则重新开始
+      if (scrollAmount >= container.scrollWidth) {
+          container.scrollLeft = 0;
+          scrollAmount = 0;
       }
 
       // 继续滚动
@@ -45,6 +41,10 @@ function startAutoScroll() {
   // 开始滚动
   requestAnimationFrame(step);
 }
+
+// 页面加载完毕后开始滚动
+window.onload = startAutoScroll;
+
 
 // 页面加载完毕后开始滚动
 window.onload = startAutoScroll;
