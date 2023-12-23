@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -28,6 +29,20 @@
 
     <main>
         <section class="recommendations" id="padel_1">
+            <header>
+                <div class="search-container">
+                    <input type="search" placeholder="Search Music...">
+                </div>
+            </header>
+        
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Genres</a></li>
+                    <li><a href="#">Playlists</a></li>
+                    <li><a href="#">New Releases</a></li>
+                </ul>
+            </nav>
             <h2 class="panel_title">First genre &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommended for You</h2>
             <span class="line_first"></span>
             <div class="card-container">
@@ -100,6 +115,7 @@
         </section>
 
         <section class="recommendations" id="padel_2">
+            <hr size="8" color="black">   <!-- 用于手动保持标题高度 -->
             <h2 class="panel_title">Second genre</h2>
             <span class="line"></span>
             <div class="card-container">
@@ -172,11 +188,13 @@
         </section>
 
         <section class="recommendations" id="padel_3">
+            <hr size="10" color="black">
             <h2 class="panel_title">Third genre</h2>
             <span class="line"></span>
         </section>
 
         <section class="recommendations" id="padel_4">
+            <hr size="12" color="black">
             <h2 class="panel_title">Fourth genre</h2>
             <span class="line"></span>
         </section>
@@ -246,7 +264,28 @@
                     end: "top top"
                 },
                 scaleX: 0,
-                transformOrigin: "right center",
+                transformOrigin: "left center",
+                ease: "none"
+            });
+        });
+    </script>
+
+    <!-- panel 颜色变化 -->
+
+
+    <script>
+        ScrollTrigger.defaults({
+            toggleActions: "restart pause resume pause"
+        });
+        let ColorPanels = gsap.utils.toArray(".recommendations");
+        ColorPanels.forEach((ColorPanel, i) => {
+            gsap.to(ColorPanel, {
+                scrollTrigger: {
+                    trigger: ColorPanel,
+                    toggleActions: "play reverse play reset"
+                },
+                duration: 1,
+                backgroundColor:"#000000",
                 ease: "none"
             });
         });

@@ -43,22 +43,21 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 20px ;
     width: 100%;
 }
 .recommendations{
-    height: 800px;
-    background-color:black;
+    height: 900px;
+    background-color:rgb(64, 90, 68);
     width: 100%;
+    background-image: none;
 }
 .recommendations h2 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
-#panel_2 , #panel_3{
-    background-color: #222;
-}
+
 .line, .line_first {
-    width: 100%;
+    width: 110%;
     height: 8px;
     margin: 0 0 10px 0;
     position: relative;
