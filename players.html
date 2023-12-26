@@ -1,0 +1,944 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation Interface</title>
+    <link rel="stylesheet" href="css/players.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./genres.html">Genres</a></li>
+            <li><a href="./players.html">Players</a></li>
+            <li><a href="./rank.html">Rank</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="buttonPart_prev">
+            <button class="button_prev"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+            <h3>PREV</h3>
+        </div>
+        <!-- 歌手 1 -->
+        <div class="singer_container" id="singer_1">
+
+            <div class="person_info">
+                <div class="person_card">
+
+                    <img class="person_image" height="200px" width="200px" src="asset/image/playlist/zhoujielun_person.png">
+                </div>
+                <h3 class="person_name">周杰伦</h3>
+            </div>
+
+            <div class="app">
+
+                <div class="gallery">
+                    <div class="item" data-title="伟大的作品" data-secondary="2022-07-15" data-text="
+            曲目  · · · · · ·
+            01. Intro
+            02. 最伟大的作品
+            03. 还在流浪
+            04. 说好不哭 (feat. 五月天阿信)
+            05. 红颜如霜
+            06. 不爱我就拉倒
+            07. Mojito
+            08. 错过的烟火
+            09. 等你下课 (feat. 杨瑞代)
+            10. 粉色海洋
+            11. 倒影
+            12. 我是如此相信 (电影《天火》主题曲)">
+                        <img src="asset/image/playlist/zhoujielun_1.jpeg" alt="zhoujielun_1" />
+                    </div>
+
+                    <div class="item" data-title="周杰伦的床边故事" data-secondary="2016-06-24." data-text="
+            曲目  · · · · · ·
+            01. 床边故事
+            02. 说走就走
+            03. 一点点
+            04. 前世情人
+            05. 英雄
+            06. 不该
+            07. 土耳其冰激凌
+            08. 告白气球
+            09. Now you See me
+            10. 爱情废柴">
+                        <img src="asset/image/playlist/zhoujielun_2.jpeg" alt="zhoujielun_2" />
+                    </div>
+
+                    <div class="item" data-title="哎呦,不错哦 ~ 周杰伦" data-secondary="2014-12-26" data-text="
+            曲目  · · · · · ·
+            01. 陽明山
+            02. 竊愛
+            03. 算什麼男人
+            04. 天涯過客
+            05. 怎麼了（演唱：周杰倫、袁詠琳）
+            06. 一口氣全唸對
+            07. 我要夏天（演唱：周杰倫、楊瑞代）
+            08. 手寫的從前
+            09. 鞋子特大號
+            10. 聽爸爸的話
+            11. 美人魚
+            12. 聽見下雨的聲音
+            ">
+                        <img src="asset/image/playlist/zhoujielun_3.jpeg" alt="zhoujielun_2" />
+                    </div>
+
+                    <div class="item" data-title="十二新作" data-secondary="2012-12-28" data-text="
+            曲目  · · · · · ·
+            01. 四季列車
+            02. 手語
+            03. 公公偏頭痛
+            04. 明明就
+            05. 傻笑
+            06. 比較大的大提琴
+            07. 愛你沒差
+            08. 紅塵客棧
+            09. 夢想啟動
+            10. 大笨鐘
+            11. 哪裡都是你
+            12. 烏克麗麗">
+                        <img src="asset/image/playlist/zhoujielun_4.jpeg" alt="zhoujielun_4" />
+                    </div>
+
+                    <div class="item" data-title="惊叹号" data-secondary="2011-11-11" data-text="
+            曲目  · · · · · ·
+            01. 驚嘆號
+            02. 迷魂曲
+            03. Mine Mine
+            04. 公主病
+            05. 你好嗎
+            06. 療傷燒肉粽
+            07. 琴傷
+            08. 水手怕水
+            09. 世界未末日
+            10. 皮影戲
+            11. 超跑女神">
+                        <img src="asset/image/playlist/zhoujielun_5.jpeg" alt="zhoujielun_5" />
+                    </div>
+
+                    <div class="item" data-title="跨时代" data-secondary="2010-05-18" data-text="
+                曲目  · · · · · ·
+                CD:
+                01. 跨時代
+                02. 說了再見
+                03. 煙花易冷
+                04. 免費教學錄影帶
+                05. 好久不見
+                06. 雨下一整晚
+                07. 嘻哈空姐
+                08. 我落淚‧情緒零碎
+                09. 愛的飛行日記
+                10. 自導自演
+                11. 超人不會飛
+                DVD:
+                01. 超人不會飛 [MV]
+                02. 免費教學錄影帶">
+                        <img src="asset/image/playlist/zhoujielun_6.jpeg" alt="zhoujielun_6" />
+                    </div>
+
+                    <div class="item" data-title="魔杰座" data-secondary="2008-10-09" data-text="
+                曲目  · · · · · ·
+                01. 龙战骑士
+                02. 给我一首歌的时间
+                03. 蛇舞
+                04. 花海
+                05. 魔术先生
+                06. 说好的幸福呢
+                07. 兰亭序
+                08. 流浪诗人
+                09. 时光机
+                10. 乔克叔叔
+                11. 稻香">
+                        <img src="asset/image/playlist/zhoujielun_7.jpeg" alt="zhoujielun_7" />
+                    </div>
+
+                    <div class="item" data-title="我很忙" data-secondary="2007-11-01" data-text="
+                曲目  · · · · · ·
+                01. 牛仔很忙 
+                02. 彩虹 
+                03. 青花瓷 
+                04. 阳光宅男
+                05. 蒲公英的约定
+                06. 无双 
+                07. 我不配 
+                08. 扯
+                09. 甜甜的
+                10 最长的电影">
+                        <img src="asset/image/playlist/zhoujielun_8.jpeg" alt="zhoujielun_8" />
+                    </div>
+
+                    <div class="item" data-title="依然范特西" data-secondary="2006-09-05" data-text="
+                曲目  · · · · · ·
+                01. 夜的第七章
+                02. 听妈妈的话
+                03. 千里之外
+                04. 本草纲目
+                05. 退后
+                06. 红模仿
+                07. 心雨
+                08. 白色风车
+                09. 迷迭香
+                10. 菊花台">
+                        <img src="asset/image/playlist/zhoujielun_9.jpeg" alt="zhoujielun_9" />
+                    </div>
+
+                    <div class="item" data-title="十一月的萧邦" data-secondary="2005-11-01" data-text="
+                曲目  · · · · · ·
+                01. 夜曲
+                02. 蓝色风暴(百事可乐广告歌)
+                03. 发如雪
+                04. 黑色毛衣
+                05. 四面楚歌
+                06. 枫
+                07. 浪漫手机
+                08. 逆鳞
+                09. 麦芽糖
+                10. 珊瑚海
+                11. 漂移
+                12. 一路向北">
+                        <img src="asset/image/playlist/zhoujielun_10.jpeg" alt="zhoujielun_10" />
+                    </div>
+
+                    <div class="item" data-title="七里香" data-secondary="2004-08-03" data-text="
+                曲目  · · · · · ·
+                01. 我的地盘
+                02. 七里香
+                03. 借口
+                04. 外婆
+                05. 将军
+                06. 搁浅
+                07. 乱舞春秋
+                08. 困兽之斗
+                09. 园游会
+                10. 止战之殇">
+                        <img src="asset/image/playlist/zhoujielun_11.jpeg" alt="zhoujielun_11" />
+                    </div>
+
+                    <div class="item" data-title="叶惠美" data-secondary="2003-07-31" data-text="
+                曲目  · · · · · ·
+                01. 以父为名
+                02. 儒夫
+                03. 晴天
+                04. 三年二班
+                05. 东风破
+                06. 你听得到
+                07. 同一种调调
+                08. 她的睫毛
+                09. 爱情悬崖
+                10. 梯田
+                11. 双刀">
+                        <img src="asset/image/playlist/zhoujielun_12.jpeg" alt="zhoujielun_12" />
+                    </div>
+
+                    <div class="item" data-title="八度空间" data-secondary="2002-07-19" data-text="
+                曲目  · · · · · ·
+                01. 半兽人（魔兽争霸III中文主题曲）
+                02. 半岛铁盒
+                03 .暗号
+                04. 龙拳
+                05. 火车叨位去（台）
+                06. 分裂
+                07. 爷爷泡的茶
+                08. 回到过去
+                09. 米兰的小铁匠
+                10. 最后的战役">
+                        <img src="asset/image/playlist/zhoujielun_13.jpeg" alt="zhoujielun_13" />
+                    </div>
+
+                    <div class="item" data-title="范特西" data-secondary="2001-09-14" data-text="
+                曲目  · · · · · ·
+                01. 爱在西元前
+                02. 爸我回来了
+                03. 简单爱
+                04. 忍者
+                05. 开不了口
+                06. 上海一九四三
+                07. 对不起
+                08. 威廉古堡
+                09. 双截棍
+                10. 安静">
+                        <img src="asset/image/playlist/zhoujielun_14.jpeg" alt="zhoujielun_14" />
+                    </div>
+
+                    <div class="item" data-title="Jay" data-secondary="2000-11-13" data-text="
+                曲目  · · · · · ·
+                01. 可爱女人
+                02. 完美主义
+                03. 星晴
+                04. 娘子
+                05. 斗牛
+                06. 黑色幽默
+                07. 伊斯坦堡
+                08. 印第安老斑鸠
+                09. 龙卷风
+                10. 反方向的钟">
+                        <img src="asset/image/playlist/zhoujielun_15.jpeg" alt="zhoujielun_15" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 歌手 2 -->
+        <div class="singer_container" id="singer_2">
+
+            <div class="person_info">
+                <div class="person_card">
+
+                    <img class="person_image" height="200px" width="200px" src="asset/image/playlist/MJ_person.png">
+                </div>
+                <h3 class="person_name">Michael Jackson</h3>
+            </div>
+
+            <div class="app">
+
+                <div class="gallery">
+                    <div class="item" data-title="Got to Be There" data-secondary="1972-01-24" data-text="
+                    曲目  · · · · · ·
+                    01. Ain't No Sunshine
+                    02. I Wanna Be Where You Are
+                    04. Girl Don't Take Your Love from Me
+                    05. In Our Small Way
+                    06. Got to Be There
+                    07. Rockin' Robin
+                    08. Wings of My Love
+                    09. Maria (You Were the Only One)
+                    10. Love Is Here and Now You're Gone
+                    11. You've Got a Friend">
+                        <img src="asset/image/playlist/MJ_1.jpeg" alt="MJ_1" />
+                    </div>
+
+                    <div class="item" data-title="Ben" data-secondary="1972-08-04" data-text="
+                    曲目  · · · · · ·
+                    01. Ben
+                    02. Greatest Show On Earth
+                    03. People Make The World Go Round
+                    04. We've Got A Good Thing Going
+                    05. Everybody's Somebody's Fool
+                    06. My Girl
+                    07. What Goes Around Comes Around
+                    08. In Our Small Way
+                    09. Shoo-be-doo-be-doo-da-day
+                    10. You Can Cry On My Shoulder">
+                        <img src="asset/image/playlist/MJ_2.jpeg" alt="MJ_2" />
+                    </div>
+
+                    <div class="item" data-title="Music and Me" data-secondary="1973" data-text="
+                    曲目  · · · · · ·
+01. With A Child's Heart
+02. Up Again
+03. All The Things You Are
+04. Happy (Love Theme From 'Lady Sings The Blues')
+05. Too Young
+06. Doggin' Around
+07. Johnny Raven
+08. Euphoria
+09. Morning Glow
+10. Music And Me">
+                        <img src="asset/image/playlist/MJ_3.jpeg" alt="MJ_3" />
+                    </div>
+
+
+                    <div class="item" data-title="Forever, Michael" data-secondary="1975年01月16日" data-text="
+                    曲目  · · · · · ·
+                    01. We're Almost There
+                    02. Take Me Back
+                    03. One Day in Your Life
+                    04. Cinderella Stay Awhile
+                    05. We've Got Forever
+                    06. Just a Little Bit of You
+                    07. You Are There
+                    08. Dapper Dan
+                    09. Dear Michael
+                    10. I'll Come Home to You
+                    ">
+                        <img src="asset/image/playlist/MJ_4.jpeg" alt="MJ_4" />
+                    </div>
+
+                    <div class="item" data-title="Off The Wall" data-secondary="1979" data-text="
+                    曲目  · · · · · ·
+                    01. Don't Stop 'Til You Get Enough
+                    02. Rock With You
+                    03. Workin' Day And Night
+                    04. Get On The Floor
+                    05. Off The Wall
+                    06. Girlfriend
+                    07. She's Out Of My Life
+                    08. I Can't Help It
+                    09. It's The Falling In Love
+                    10. Burn This Disco Out
+                    11. Interview with Quincy Jones (1)
+                    12. Don't Stop 'Til You Get Enough (intro)
+                    13. Don't Stop 'Til You Get Enough (original demo from 1978)
+                    14. Interview with Quincy Jones (2)
+                    15. Workin' Day And Night (intro)
+                    16. Workin' Day And Night (original demo from 1978)
+                    17. Interview with Quincy Jones (3)
+                    18. Interview with Rod Temperton
+                    19. Interview with Quincy Jones (4)">
+                        <img src="asset/image/playlist/MJ_5.jpg" alt="MJ_5" />
+                    </div>
+
+                    <div class="item" data-title="Thriller" data-secondary="1982" data-text="
+                    曲目  · · · · · ·
+                    01. Wanna Be Startin' Somethin'
+                    02. Baby Be Mine
+                    03. The Girl Is Mine
+                    04. Thriller
+                    05. Beat It
+                    06. Billie Jean
+                    07. Human Nature
+                    08. P.Y.T. (Pretty Young Thing)
+                    09. The Lady In My Life
+                    10. Interview - Quincy Jones
+                    11. Someone In The Dark
+                    12. Interview - Quincy Jones
+                    13. Billie Jean (Home Demo From 1981)
+                    14. Interview - Quincy Jones
+                    15. Interview - Rod Temperton/Quincy Jones
+                    16. Interview - Quincy Jones
+                    17. Voice-Over Session from 'Thriller' - Michael Jackson/Vincent Price
+                    18. Interview - Rod Temperton/Quincy Jones
+                    19. Interview - Quincy Jones
+                    20. Carousel
+                    21. Interview - Quincy Jones">
+                        <img src="asset/image/playlist/MJ_6.jpeg" alt="MJ_6" />
+                    </div>
+
+                    <div class="item" data-title="Bad" data-secondary="1990-10-17" data-text="
+                    曲目  · · · · · ·
+                    01. Bad
+                    02. Way You Make Me Feel
+                    03. Speed Demon
+                    04. Liberian Girl
+                    05. Just Good Friends - Michael Jackson, Stevie Wonder
+                    06. Another Part of Me
+                    07. Man in the Mirror - Siedah Garrett, Michael Jackson, The Winans
+                    08. I Just Can't Stop Loving You - Siedah Garrett, Michael Jackson
+                    09. Dirty Diana
+                    10. Smooth Criminal
+                    Leave Me Alone [*]">
+                        <img src="asset/image/playlist/MJ_7.jpeg" alt="MJ_7" />
+                    </div>
+
+                    <div class="item" data-title="Dangerous" data-secondary="1991" data-text="
+                    曲目  · · · · · ·
+                    01. Jam
+                    02. Why You Wanna Trip On Me
+                    03. In The Closet
+                    04. She Drives Me Wild
+                    05. Remember The Time
+                    06. Can't Let Her Get Away
+                    07. Heal The World
+                    08. Black Or White
+                    09. Who Is It
+                    10. Give In To Me
+                    11. Will You Be There
+                    12. Keep The Faith
+                    13. Gone Too Soon
+                    14. Dangerous">
+                        <img src="asset/image/playlist/MJ_8.jpeg" alt="MJ_8" />
+                    </div>
+
+                    <div class="item" data-title="Thriller" data-secondary="1982" data-text="
+曲目  · · · · · ·
+01. Billie Jean
+02. Way You Make Me Feel
+03. Black or White
+04. Rock with You
+05. She's Out of My Life
+06. Bad
+07. I Just Can't Stop Loving You - Siedah Garrett, Michael Jackson
+08. Man in the Mirror
+09. Thriller
+10. Beat It
+11. Girl Is Mine - Michael Jackson, Paul McCartney
+12. Remember the Time
+13. Don't Stop 'Til You Get Enough
+14. Wanna Be Startin' Somethin'
+15. Heal the World
+16. Scream - Janet Jackson, Michael Jackson
+17. They Don't Care About Us
+18. Stranger in Moscow
+19. This Time Around
+20. Earth Song
+21. D.S.
+22. Money
+23. Come Together
+24. You Are Not Alone
+25. Childhood
+26. Tabloid Junkie
+27. 2 Bad
+28. History
+29. Little Susie
+30. Smile">
+                        <img src="asset/image/playlist/MJ_9.jpeg" alt="MJ_9" />
+                    </div>
+
+
+                    <div class="item" data-title="Invincible" data-secondary="2005-11-01" data-text="
+曲目  · · · · · ·
+01. Unbreakable
+02. Heartbreaker
+03. Invincible
+04. Break Of Dawn
+05. Heaven Can Wait
+06. You Rock My World
+07. Butterflies
+08. Speechless
+09. 2000 Watts
+10. You Are My Life
+11. Privacy
+12. Don't Walk Away
+13. Cry
+14. The Lost Children
+15. Whatever Happens
+16. Threatened">
+                        <img src="asset/image/playlist/MJ_10.jpeg" alt="MJ_10" />
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 歌手 3  -->
+        <div class="singer_container" id="singer_3">
+
+            <div class="person_info">
+                <div class="person_card">
+
+                    <img class="person_image" height="200px" width="200px" src="asset/image/playlist/JB_person.png">
+                </div>
+                <h3 class="person_name">Justin Bieber</h3>
+            </div>
+
+            <div class="app">
+
+                <div class="gallery">
+                    <div class="item" data-title="ONE TIME" data-secondary="2009-05-18" data-text="
+                    曲目  · · · · · ·
+                    01. One Time (Album Version)
+                    02. One Time (Acoustic Version)">
+                        <img src="asset/image/playlist/jb_1.jpeg" alt="zhoujielun_1" />
+                    </div>
+
+                    <div class="item" data-title="One Less Lonely Girl" data-secondary="2009-11-17" data-text="
+                    曲目  · · · · · ·
+                    01. One Less Lonely Girl">
+                        <img src="asset/image/playlist/jb_2.jpeg" alt="zhoujielun_2" />
+                    </div>
+
+                    <div class="item" data-title="Baby" data-secondary="2010-01-18" data-text="
+            曲目  · · · · · ·
+            01. Baby (feat. Ludacris)
+            ">
+                        <img src="asset/image/playlist/jb_3.jpeg" alt="zhoujielun_2" />
+                    </div>
+
+                    <div class="item" data-title="Eenie Meenie" data-secondary="2010-3-16" data-text="
+            曲目  · · · · · ·
+            01. Eenie Meenie">
+                        <img src="asset/image/playlist/jb_4.jpeg" alt="zhoujielun_4" />
+                    </div>
+
+                    <div class="item" data-title="Somebody to Love" data-secondary="2010-05-28" data-text="
+                    曲目  · · · · · ·
+                    01. Somebody to Love
+                    02. Where Are You Now?">
+                        <img src="asset/image/playlist/jb_5.jpeg" alt="zhoujielun_5" />
+                    </div>
+
+                    <div class="item" data-title="Never Say Never" data-secondary="2010-06-08" data-text="
+                    曲目  · · · · · ·
+                    01. Never Say Never - featuring Jaden Smith
+                    02. That Should Be Me - Remix featuring Rascal Flatts
+                    03. Somebody To Love - Remix featuring Usher
+                    04. Up - Remix featuring Chris Brown
+                    05. Overboard (Live)- featuring Miley Cyrus
+                    06. Runaway Love - Kanye West Remix featuring Raekwon
+                    07. Born To Be Somebody">
+                        <img src="asset/image/playlist/jb_6.jpeg" alt="zhoujielun_6" />
+                    </div>
+
+                    <div class="item" data-title="U Smile" data-secondary="2010-03-16" data-text="
+                曲目  · · · · · ·
+                01. U Smile">
+                        <img src="asset/image/playlist/jb_7.jpeg" alt="zhoujielun_7" />
+                    </div>
+
+                    <div class="item" data-title="Boyfriend" data-secondary="2012-03-26" data-text="
+                曲目  · · · · · ·
+                01. Boyfriend ">
+                        <img src="asset/image/playlist/jb_8.jpeg" alt="zhoujielun_8" />
+                    </div>
+
+                    <div class="item" data-title="All Around the World" data-secondary="2013-02-26" data-text="
+                曲目  · · · · · ·
+                01. All Around the World">
+                        <img src="asset/image/playlist/jb_9.jpeg" alt="zhoujielun_9" />
+                    </div>
+
+                    <div class="item" data-title="Heartbreaker" data-secondary="2013-10-07" data-text="
+                曲目  · · · · · ·
+                01. Heartbreaker
+                ">
+                        <img src="asset/image/playlist/jb_10.jpeg" alt="zhoujielun_10" />
+                    </div>
+
+                    <div class="item" data-title="All That Matters" data-secondary="2013-10-14" data-text="
+                曲目  · · · · · ·
+                01. All That Matters
+                ">
+                        <img src="asset/image/playlist/jb_11.png" alt="zhoujielun_11" />
+                    </div>
+
+                    <div class="item" data-title="Hold Tight" data-secondary="2013-10-21" data-text="
+                曲目  · · · · · ·
+                01. Hold Tight
+                ">
+                        <img src="asset/image/playlist/jb_12.png" alt="zhoujielun_12" />
+                    </div>
+
+                    <div class="item" data-title="Wait for a Minute" data-secondary="2013-10-22" data-text="
+                曲目  · · · · · ·
+                01. Wait for a Minute
+                ">
+                        <img src="asset/image/playlist/jb_13.jpeg" alt="zhoujielun_13" />
+                    </div>
+
+                    <div class="item" data-title="Home to Mama" data-secondary="2014-11-11" data-text="
+                曲目  · · · · · ·
+                01. Home to Mama
+                ">
+                        <img src="asset/image/playlist/jb_14.jpeg" alt="zhoujielun_14" />
+                    </div>
+
+                    <div class="item" data-title="Where Are Ü Now Remixs" data-secondary="2015-02-27" data-text="
+                曲目  · · · · · ·
+                01. Where Are Ü Now Remixs
+                ">
+                        <img src="asset/image/playlist/jb_15.jpeg" alt="zhoujielun_15" />
+                    </div>
+                    <div class="item" data-title="What Do You Mean?" data-secondary="2015-08-28" data-text="
+曲目  · · · · · ·
+01. What Do You Mean?
+">
+                        <img src="asset/image/playlist/jb_16.png" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Sorry" data-secondary="2015-10-23" data-text="
+曲目  · · · · · ·
+01. Sorry
+">
+                        <img src="asset/image/playlist/jb_17.png" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Love Yourself" data-secondary="2015-11-08" data-text="
+曲目  · · · · · ·
+01. Love Yourself
+">
+                        <img src="asset/image/playlist/jb_18.png" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Purpose" data-secondary="2015-11-13" data-text="
+曲目  · · · · · ·
+01. Purpose
+">
+                        <img src="asset/image/playlist/jb_19.jpeg" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Company" data-secondary="2016-03-08" data-text="
+曲目  · · · · · ·
+01. Company
+">
+                        <img src="asset/image/playlist/jb_20.png" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Friends" data-secondary="2017-08-17" data-text="
+曲目  · · · · · ·
+01. Friends
+">
+                        <img src="asset/image/playlist/jb_21.jpeg" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Changes" data-secondary="2020-2-14" data-text="
+                    曲目  · · · · · ·
+                    01. All Around Me
+                    02.  Habitual
+                    03.  Come Around Me
+                    04.  Intentions
+                    05. Yummy
+                    06.  Available
+                    07.  Forever
+                    08.  Running Over
+                    09.  Take It Out On Me
+                    10.  Second Emotion
+                    11.  Get Me
+                    12.  E.T.A.
+                    13.  Changes
+                    14.  Confirmation
+                    15.  That’s What Love Is
+                    16.  At Least For Now
+                    17.  Yummy (Summer Walker Remix)
+">
+                        <img src="asset/image/playlist/jb_22.jpeg" alt="专辑名称" />
+                    </div>
+
+                    <div class="item" data-title="Justice" data-secondary="2021-3-19" data-text="
+                    曲目  · · · · · ·
+                    01. 2 Much
+                    02. Deserve You
+                    03. As I Am (feat. Khalid)
+                    04. Off My Face
+                    05. Holy (feat. Chance The Rapper)
+                    06. Unstable (feat. The Kid Laroi)
+                    07. Interlude
+                    08. Die For You（feat.Dominic Fike）
+                    09. Hold On
+                    10. Somebody
+                    11. Ghost
+                    12. Peaches (feat. Daniel Caeser & Giveon)
+                    13. Love You Different (feat. Beam)
+                    14. Loved By You
+                    15. Anyone
+                    16. Lonely (feat. Benny Blanco)
+">
+                        <img src="asset/image/playlist/jb_23.jpeg" alt="专辑名称" />
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="buttonPart_next">
+            <button class="button_next"><i class="fa-solid fa-arrow-right fa-xl"></i></button>
+            <h3>NEXT</h3>
+        </div>
+
+        <div id="overlay"></div> <!-- 覆盖层用于实现隐藏背景的效果 -->
+
+
+
+        <!-- 专辑显示细节 -->
+        <div class="detail">
+            <img />
+            <div class="content">
+                <div class="title">Placeholder title</div>
+                <div class="secondary">Placeholder secondary</div>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cum, est
+                    amet
+                    delectus, blanditiis voluptatem laborum pariatur consequatur quae voluptate, nisi. Laborum
+                    adipisci
+                    iste
+                    earum distinctio, fugit, quas ipsa impedit.</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Musicane. All rights reserved.</p>
+    </footer>
+    <!-- 脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Flip.min.js"></script>
+    <script src="https://kit.fontawesome.com/20e1f64115.js" crossorigin="anonymous"></script>
+
+    <!-- 显示专辑细节 -->
+    <script>
+        const items = gsap.utils.toArray(".item"),
+            details = document.querySelector('.detail'),
+            detailContent = document.querySelector('.content'),
+            detailImage = document.querySelector('.detail img'),
+            detailTitle = document.querySelector('.detail .title'),
+            detailSecondary = document.querySelector('.detail .secondary'),
+            detailDescription = document.querySelector('.detail .description');
+
+        let activeItem; // keeps track of which item is open (details)
+
+        gsap.set(detailContent, { yPercent: -100 }); // close the details "drawer" (content) initially
+
+        function showDetails(item) {
+            if (activeItem) { // someone could click on an element behind the open details panel in which case we should just close it.
+                return hideDetails();
+            }
+            let onLoad = () => {
+
+                // position the details on top of the item (scaled down)
+                Flip.fit(details, item, { scale: true, fitChild: detailImage });
+
+                // record the state
+                const state = Flip.getState(details);
+
+                // set the final state
+                gsap.set(details, { clearProps: true }); // wipe out all inline stuff so it's in the native state (not scaled)
+                gsap.set(details, { xPercent: -50, top: "50%", yPercent: -50, visibility: "visible", overflow: "hidden" });
+
+                gsap.to(detailImage, { filter: "blur(5px)", duration: 0.5 });  //图片模糊化
+
+                gsap.to(".person_image", { x: -100, duration: 0.5, delay: 0.2 }); //头像移动
+
+                gsap.to(".person_name", { x: -100, duration: 0.5, delay: 0.4 }); //人名移动
+
+                gsap.to(".buttonPart_next", { opacity: 0, duration: 0.5, }) //按钮隐藏
+                gsap.to(".buttonPart_prev", { opacity: 0, duration: 0.5, }) //按钮隐藏
+
+                gsap.to(".app", { backgroundColor: "rgb(40, 42, 39);", duration: 1, delay: 0.3 }); // 隐藏背景
+                activeItem = item;
+
+                Flip.from(state, {
+                    duration: 0.5,
+                    ease: "power2.inOut",
+                    scale: true,
+                    onComplete: () => gsap.set(details, { overflow: "auto" }) // to permit scrolling if necessary
+                })
+                    // Flip.from() returns a timeline, so add a tween to reveal the detail content. That way, if the flip gets interrupted and forced to completion & killed, this does too.
+                    .to(detailContent, { yPercent: 0 }, 0.2);
+
+                detailImage.removeEventListener("load", onLoad);
+                document.addEventListener('click', hideDetails);
+            };
+
+            // Change image and text
+            const data = item.dataset;
+            detailImage.addEventListener("load", onLoad);
+            detailImage.src = item.querySelector('img').src;
+            detailTitle.innerText = data.title;
+            detailSecondary.innerText = data.secondary;
+            detailDescription.innerText = data.text;
+
+            // stagger-fade the items out from the one that was selected in a staggered way (and kill the tween of the selected item)
+            gsap.to(items, { opacity: 0.3, stagger: { amount: 0.7, from: items.indexOf(item), grid: "auto" } }).kill(item);
+
+        }
+
+        function hideDetails() {
+            document.removeEventListener('click', hideDetails);
+            gsap.set(details, { overflow: "hidden" });
+
+            // record the current state of details
+            const state = Flip.getState(details);
+
+            // scale details down so that its detailImage fits exactly on top of activeItem
+            Flip.fit(details, activeItem, { scale: true, fitChild: detailImage });
+
+            // animate the other elements, like all fade all items back up to full opacity, slide the detailContent away, and tween the background color to white.
+            const tl = gsap.timeline();
+            tl.set(details, { overflow: "hidden" })
+                .to(detailContent, { yPercent: -100 })
+                .to(items, { opacity: 1, stagger: { amount: 0.7, from: items.indexOf(activeItem), grid: "auto" } })
+                .to(".app", { backgroundColor: "rgb(32, 36, 31)" }, "<");
+
+            gsap.to(detailImage, { filter: "blur(0px)", duration: 0.5 }) //图片模糊化返回
+
+            gsap.to(".person_image", { x: 0, duration: 0.5, delay: 0.4 }); //头像移动返回
+            gsap.to(".person_name", { x: 0, duration: 0.5, delay: 0.6 }); //人名移动返回
+
+            gsap.to(".buttonPart_next", { opacity: 1, duration: 0.5, delay: 0.4 }) //按钮隐藏返回
+            gsap.to(".buttonPart_prev", { opacity: 1, duration: 0.5, delay: 0.4 }) //按钮隐藏返回
+            // animate from the original state to the current one.
+            Flip.from(state, {
+                scale: true,
+                duration: 0.5,
+                delay: 0.2, // 0.2 seconds because we want the details to slide up first, then flip.
+                onInterrupt: () => tl.kill()
+            })
+                .set(details, { visibility: "hidden" });
+
+            activeItem = null;
+        }
+
+        // Add click listeners
+        gsap.utils.toArray('.item').forEach(item => item.addEventListener('click', () => showDetails(item)));
+
+        // Intro animation
+        window.addEventListener('load', () => {
+            gsap.to('.app', { autoAlpha: 1, duration: 0.2 });
+            gsap.from('.item', { autoAlpha: 0, yPercent: 30, stagger: 0.04 });
+        });
+    </script>
+    <!-- 头像翻转效果 -->
+
+    <!-- 鼠标悬停按钮效果 -->
+    <script>
+        const arrowButtons_next = document.querySelectorAll(".buttonPart_next");
+
+        arrowButtons_next.forEach(button => {
+            let tl = gsap.timeline({ paused: true });
+            tl.to(button, { duration: 0.7, x: 20, opacity: 0, repeat: -1 });
+            button.addEventListener('mouseenter', function () {
+                tl.play();
+            });
+
+            button.addEventListener('mouseleave', function () {
+                tl.pause().progress(0);
+            });
+        });
+
+        const arrowButtons_prev = document.querySelectorAll(".buttonPart_prev");
+
+        arrowButtons_prev.forEach(button => {
+            let tl = gsap.timeline({ paused: true });
+            tl.to(button, { duration: 0.7, x: -20, opacity: 0, repeat: -1 });
+            button.addEventListener('mouseenter', function () {
+                tl.play();
+            });
+
+            button.addEventListener('mouseleave', function () {
+                tl.pause().progress(0);
+            });
+        });
+    </script>
+
+    <!-- 鼠标点击按钮动画 -->
+    <script>
+        window.onload = function () {
+            let currentSinger = 0;  // 全局变量用于保存当前显示的歌手
+            const singers = gsap.utils.toArray(".singer_container");  // 获取所有的歌手
+            let prevButton = document.querySelector(".buttonPart_prev");
+            let nextButton = document.querySelector(".buttonPart_next");
+
+            // 隐藏所有歌手
+            singers.forEach(singer => {
+                gsap.set(singer, { autoAlpha: 0 });
+            });
+
+            // 显示第一个歌手
+            gsap.set(singers[currentSinger], { autoAlpha: 1 });
+
+            // 点击prev按钮
+            prevButton.addEventListener('click', function () {
+                if (currentSinger - 1 < 0) {
+                    alert('No more previous Singer');
+                } else {
+                    gsap.to(singers[currentSinger], { autoAlpha: 0, duration: 0.3 });
+                    currentSinger--;
+                    gsap.to(singers[currentSinger], { autoAlpha: 1, duration: 0.3 });
+                }
+                gsap.to(".buttonPart_prev", { duration: 0.5, x: "-=100" });
+                gsap.to(".buttonPart_prev", { duration: 0.5, x: "+=100", delay: 0.5 });
+            });
+
+            // 点击next按钮
+            nextButton.addEventListener('click', function () {
+                if (currentSinger + 1 >= singers.length) {
+                    alert('No more next Singer');
+                } else {
+                    gsap.to(singers[currentSinger], { autoAlpha: 0, duration: 0.3 });
+                    currentSinger++;
+                    gsap.to(singers[currentSinger], { autoAlpha: 1, duration: 0.3 });
+                }
+                gsap.to(".buttonPart_next", { duration: 0.5, x: "+=100" });
+                gsap.to(".buttonPart_next", { duration: 0.5, x: "-=100", delay: 0.5 });
+            });
+        }
+    </script>
+</body>
+
+</html>
