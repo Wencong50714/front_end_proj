@@ -3,31 +3,65 @@
 <html lang="en">
 
 <head>
+    <!-- Basic-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recommendation Interface</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="JS.js"></script>
+
+    <!-- Theme style-->
+    <link href="css/index.css" rel="stylesheet" >
+
+    <!-- Font theme-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap">
 </head>
 
 <body>
-    <main>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./genres.html">Genres</a></li>
-                <li><a href="./playlist.html">Playlists</a></li>
-                <li><a href="./rank.html">Rank</a></li>
-            </ul>
-        </nav>
+    <!-- HEADER -->
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./genres.html">Genres</a></li>
+            <li><a href="./playlist.html">Playlists</a></li>
+            <li><a href="./rank.html">Rank</a></li>
+        </ul>
+    </nav>
+    <!-- END HEADER  -->
 
-        <h2> Welcome to our website </h2>
-    </main>
+    <!-- PAGE CONTEN 1 -->
+    <div class="container" id="imageContainer">
+        <div class="content">
+            <h1>Welcome to the Music Paradise</h1>
+            <p>
+                Discover a world where music comes alive <br><br>
+                An oasis for music enthusiasts and seekers of sonic bliss. <br><br>
+                We bring you a curated experience that transcends boundaries and genres.
+            </p>
+        </div>
+        <button id="nextButton">Jump to Next Page</button>
+    </div>
+    <!-- END PAGE CONTEN 1-->
 
+    
+
+    <!-- PAGE CONTEN 2 -->
+    <div class="container" id="page2">
+        <div class="content">
+            <h1>Next Page: Discover More Music</h1>
+            <p>
+                Explore the vast universe of melodies and rhythms. <br><br>
+                Let the journey into the music paradise continue!
+            </p>
+        </div>
+    </div>
+    <!-- END PAGE CONTEN 2-->
+
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2023 Musicane. All rights reserved.</p>
     </footer>
+    <!-- END FOOTER -->
 
+    <script src="index.js"></script>
 </body>
 
 </html>
