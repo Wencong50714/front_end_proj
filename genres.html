@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendation Interface</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="JS.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="recommendations" id="padel_1">
+            <header>
+                <div class="search-container">
+                    <input type="search" placeholder="Search Music...">
+                </div>
+            </header>
+        
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./genres.html">Genres</a></li>
+                    <li><a href="./playlist.html">Playlists</a></li>
+                    <li><a href="./rank.html">Rank</a></li>
+                </ul>
+            </nav>
+            <h2 class="panel_title">First genre &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommended for You</h2>
+            <span class="line_first"></span>
+            <div class="card-container">
+                <!-- Repeat this block for multiple cards -->
+                <div class="card">
+                    <img src="asset/image/Old_Town_Road_cover.jpg" alt="Old_Town_Road" class="card-image"
+                        onclick="showDetail(event)">
+                    <h3>Old Town Road</h3>
+                    <h5>Lil Nas X</h5>
+                    <p>"Old Town Road" is the debut mainstream single by American rapper Lil Nas X, first released
+                        independently in December 2018</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Baby_cover.jpeg" alt="Baby" class="card-image" onclick="showDetail(event)">
+                    <h3>Baby</h3>
+                    <h5>Justin Bieber</h5>
+                    <p>"Baby" is a song by Canadian singer Justin Bieber featuring American rapper Ludacris. It was
+                        released as the lead single on Bieber's debut studio album, My World 2.0. The track was written
+                        by the artists alongside Christina Milian and producers Tricky Stewart and The-Dream.</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Stan_cover.jpeg" alt="Stan" class="card-image" onclick="showDetail(event)">
+                    <h3>Stan</h3>
+                    <h5>Eminem</h5>
+                    <p>"The song is based on the correspondence between Stan and Eminem, with the first three verses
+                        being letters from Stan to Eminem and the last verse being letters from Eminem to Stan. The song
+                        includes Dido's melancholic female vocals and Eminem's heavily nasal rapping.</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/images.jpeg" alt="Bad Guy" class="card-image" onclick="showDetail(event)">
+                    <h3>Bad Guy</h3>
+                    <h5>Billie Eilish</h5>
+                    <p>"Bad Guy" is a song by the American singer-songwriter Billie Eilish and the fifth single from her
+                        first studio album 2019</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Rolling_in_the_Deep_cover.png" alt="Rolling In the Deep" class="card-image"
+                        onclick="showDetail(event)">
+                    <h3>Rolling In the Deep</h3>
+                    <h5>Adele</h5>
+                    <p>"Rolling in the Deep" is a song by English singer-songwriter Adele from her second studio album,
+                        21 (2011). It is the lead single and opening track on the album. The song was written by Adele
+                        and Paul Epworth. </p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Everybody Dies In Their Nightmares_cover.jpeg"
+                        alt="Everybody Dies In Their Nightmares" class="card-image" onclick="showDetail(event)">
+                    <h3>Everybody Dies In Their Nightmares</h3>
+                    <h5>XXXTENTACION</h5>
+                    <p>"Everybody Dies in Their Nightmares" is a song by American rapper XXXTentacion from his debut
+                        studio album 17 (2017). It was produced by Potsu.</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/see_youn_down_cover.webp" alt="See You Down" class="card-image"
+                        onclick="showDetail(event)">
+                    <h3>See You Down</h3>
+                    <h5>Queen Omega & Lions Flow</h5>
+                    <p>With vibrant music, Queen Omega invites us to have a positive attitude no matter what and to stay
+                        awake to avoid being dragged down further. She sings for all the people who may feel down to
+                        keep shining in the dark, to continue smiling and fighting.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="recommendations" id="padel_2">
+            <hr size="8" color="black">   <!-- 用于手动保持标题高度 -->
+            <h2 class="panel_title">Second genre</h2>
+            <span class="line"></span>
+            <div class="card-container">
+                <!-- Repeat this block for multiple cards -->
+                <div class="card">
+                    <img src="asset/image/Old_Town_Road_cover.jpg" alt="Old_Town_Road" class="card-image"
+                        onclick="showDetail(event)">
+                    <h3>Old Town Road</h3>
+                    <h5>Lil Nas X</h5>
+                    <p>"Old Town Road" is the debut mainstream single by American rapper Lil Nas X, first released
+                        independently in December 2018</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Baby_cover.jpeg" alt="Baby" class="card-image" onclick="showDetail(event)">
+                    <h3>Baby</h3>
+                    <h5>Justin Bieber</h5>
+                    <p>"Baby" is a song by Canadian singer Justin Bieber featuring American rapper Ludacris. It was
+                        released as the lead single on Bieber's debut studio album, My World 2.0. The track was written
+                        by the artists alongside Christina Milian and producers Tricky Stewart and The-Dream.</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Stan_cover.jpeg" alt="Stan" class="card-image" onclick="showDetail(event)">
+                    <h3>Stan</h3>
+                    <h5>Eminem</h5>
+                    <p>"The song is based on the correspondence between Stan and Eminem, with the first three verses
+                        being letters from Stan to Eminem and the last verse being letters from Eminem to Stan. The song
+                        includes Dido's melancholic female vocals and Eminem's heavily nasal rapping.</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/images.jpeg" alt="Bad Guy" class="card-image" onclick="showDetail(event)">
+                    <h3>Bad Guy</h3>
+                    <h5>Billie Eilish</h5>
+                    <p>"Bad Guy" is a song by the American singer-songwriter Billie Eilish and the fifth single from her
+                        first studio album 2019</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Rolling_in_the_Deep_cover.png" alt="Rolling In the Deep" class="card-image"
+                        onclick="showDetail(event)">
+                    <h3>Rolling In the Deep</h3>
+                    <h5>Adele</h5>
+                    <p>"Rolling in the Deep" is a song by English singer-songwriter Adele from her second studio album,
+                        21 (2011). It is the lead single and opening track on the album. The song was written by Adele
+                        and Paul Epworth. </p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/Everybody Dies In Their Nightmares_cover.jpeg"
+                        alt="Everybody Dies In Their Nightmares" class="card-image" onclick="showDetail(event)">
+                    <h3>Everybody Dies In Their Nightmares</h3>
+                    <h5>XXXTENTACION</h5>
+                    <p>"Everybody Dies in Their Nightmares" is a song by American rapper XXXTentacion from his debut
+                        studio album 17 (2017). It was produced by Potsu.</p>
+                </div>
+
+                <div class="card">
+                    <img src="asset/image/see_youn_down_cover.webp" alt="See You Down" class="card-image"
+                        onclick="showDetail(event)">
+                    <h3>See You Down</h3>
+                    <h5>Queen Omega & Lions Flow</h5>
+                    <p>With vibrant music, Queen Omega invites us to have a positive attitude no matter what and to stay
+                        awake to avoid being dragged down further. She sings for all the people who may feel down to
+                        keep shining in the dark, to continue smiling and fighting.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="recommendations" id="padel_3">
+            <hr size="10" color="black">
+            <h2 class="panel_title">Third genre</h2>
+            <span class="line"></span>
+        </section>
+
+        <section class="recommendations" id="padel_4">
+            <hr size="12" color="black">
+            <h2 class="panel_title">Fourth genre</h2>
+            <span class="line"></span>
+        </section>
+
+
+        <h2> Need More ...</h2>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Musicane. All rights reserved.</p>
+    </footer>
+    <!--模态框显示歌曲详情-->
+    <div id="modal-container">
+        <div id="modal-content">
+            <span id="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-artist"></p>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <!-- 导入GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
+    <!-- panel 的滚动动画 -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let panels = gsap.utils.toArray(".recommendations");
+        // we'll create a ScrollTrigger for each panel just to track when each panel's top hits the top of the viewport (we only need this for snapping)
+        let tops = panels.map(panel => ScrollTrigger.create({ trigger: panel, start: "top top" }));
+
+        panels.forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+                pin: true,
+                pinSpacing: false
+            });
+        });
+
+        ScrollTrigger.create({
+            snap: {
+                snapTo: (progress, self) => {
+                    let panelStarts = tops.map(st => st.start), // an Array of all the starting scroll positions. We do this on each scroll to make sure it's totally responsive. Starting positions may change when the user resizes the viewport
+                        snapScroll = gsap.utils.snap(panelStarts, self.scroll()); // find the closest one
+                    return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll); // snapping requires a progress value, so convert the scroll position into a normalized progress value between 0 and 1
+                },
+                duration: 0.5
+            }
+        });
+
+    </script>
+
+    <!-- genre标题的出现动画 -->
+
+    <script>
+        let lines = gsap.utils.toArray(".line");
+        lines.forEach((line, i) => {
+            gsap.from(line, {
+                scrollTrigger: {
+                    trigger: line,
+                    scrub: true,
+                    start: "top bottom",
+                    end: "top top"
+                },
+                scaleX: 0,
+                transformOrigin: "left center",
+                ease: "none"
+            });
+        });
+    </script>
+
+    <!-- panel 颜色变化 -->
+
+    <script>
+        ScrollTrigger.defaults({
+            toggleActions: "restart pause resume pause"
+        });
+        let ColorPanels = gsap.utils.toArray(".recommendations");
+        ColorPanels.forEach((ColorPanel, i) => {
+            gsap.to(ColorPanel, {
+                scrollTrigger: {
+                    trigger: ColorPanel,
+                    toggleActions: "play reverse play reset"
+                },
+                duration: 1,
+                backgroundColor:"#000000",
+                ease: "none"
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -45,7 +45,3 @@ function startAutoScroll() {
 // 页面加载完毕后开始滚动
 window.onload = startAutoScroll;
 
-
-// 页面加载完毕后开始滚动
-window.onload = startAutoScroll;
-
