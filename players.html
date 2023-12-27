@@ -780,7 +780,7 @@
                 gsap.set(details, { clearProps: true }); // wipe out all inline stuff so it's in the native state (not scaled)
                 gsap.set(details, { xPercent: -50, top: "50%", yPercent: -50, visibility: "visible", overflow: "hidden" });
 
-                gsap.to(detailImage, { filter: "blur(5px)", duration: 0.5 });  //图片模糊化
+                gsap.to(detailImage, { filter: "blur(5px)", duration: 0.5 , delay:0.5});  //图片模糊化
 
                 gsap.to(".person_image", { x: -100, duration: 0.5, delay: 0.2 }); //头像移动
 
@@ -919,7 +919,7 @@
                 } else {
                     gsap.to(singers[currentSinger], { autoAlpha: 0, duration: 0.3 });
                     currentSinger--;
-                    gsap.to(singers[currentSinger], { autoAlpha: 1, duration: 0.3 });
+                    gsap.fromTo(singers[currentSinger], {autoAlpha: 0, x:-200 }, { autoAlpha: 1,  duration: 0.3 , x:0});
                 }
                 gsap.to(".buttonPart_prev", { duration: 0.5, x: "-=100" });
                 gsap.to(".buttonPart_prev", { duration: 0.5, x: "+=100", delay: 0.5 });
@@ -930,9 +930,9 @@
                 if (currentSinger + 1 >= singers.length) {
                     alert('No more next Singer');
                 } else {
-                    gsap.to(singers[currentSinger], { autoAlpha: 0, duration: 0.3 });
+                    gsap.to(singers[currentSinger], { autoAlpha: 0, duration: 0.5, });
                     currentSinger++;
-                    gsap.to(singers[currentSinger], { autoAlpha: 1, duration: 0.3 });
+                    gsap.fromTo(singers[currentSinger], {autoAlpha: 0, x:200}, { autoAlpha: 1,  duration: 0.3 , x:0 , ease: bounce});
                 }
                 gsap.to(".buttonPart_next", { duration: 0.5, x: "+=100" });
                 gsap.to(".buttonPart_next", { duration: 0.5, x: "-=100", delay: 0.5 });

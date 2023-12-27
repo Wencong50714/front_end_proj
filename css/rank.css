@@ -44,7 +44,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px ;
+    padding: 20px;
     width: 100%;
 }
 
@@ -60,4 +60,75 @@ footer {
 footer p {
     margin: 0;
     color: #666;
+}
+
+
+
+
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 15vh;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: #121212;
+    opacity: 0;
+    will-change: transform;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    font: italic 20px serif;
+}
+
+.box.song {
+    width: 500px;
+    border-radius: 15px 0 0 15px;
+    font: italic 30px serif;
+}
+
+
+.box.singer {
+    width: 200px;
+    border-radius: 0 15px 15px 0;
+}
+
+.rankList {
+    /* display: none; */
+    position: absolute;
+    top: 179px;
+    left: 650px;
+    font-size: 48px;
+    font-weight: bold;
+    color: aquamarine;
+    z-index: -1;
+    opacity: 0;
+}
+
+.rankNum{
+    height: 149.6px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    font: italic 40px serif;
+    left: 200px;
+    position: relative;
 }
