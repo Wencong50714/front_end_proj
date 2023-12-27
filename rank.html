@@ -6,28 +6,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Recommendation Interface</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="JS.js"></script>
+    <link rel="stylesheet" href="css/rank.css">
+    <script src="rank.js"></script>
 </head>
 
 <body>
     <main>
+
         <nav>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./genres.html">Genres</a></li>
-                <li><a href="./playlist.html">Playlists</a></li>
+                <li><a href="./players.html">Players</a></li>
                 <li><a href="./rank.html">Rank</a></li>
             </ul>
         </nav>
 
-        <h2> TODO: fill this page </h2>
+        <h2 class="title"> Rank of 2022 </h2>
+        <div class="container">
+            <div class="box song">
+                <h2>Bad Habit</h2>
+            </div>
+            <div class="box singer">
+                <h2>Steve Lacy</h2>
+            </div>
+
+            <div class="box song">
+                <h2>Break My Soul</h2>
+            </div>
+            <div class="box singer">
+                <h2>Beyoncé</h2>
+            </div>
+
+            <div class="box song">
+                <h2>As It Was</h2>
+            </div>
+            <div class="box singer">
+                <h2>Harry Styles</h2>
+            </div>
+
+            <div class="box song">
+                <h2>About Damn Time</h2>
+            </div>
+            <div class="box singer">
+                <h2>Lizzo</h2>
+            </div>
+
+            <div class="box song">
+                <h2>Anti-Hero</h2>
+            </div>
+            <div class="box singer">
+                <h2>Taylor Swift</h2>
+            </div>
+            <div class="box song">
+                <h2>Tití Me Preguntó</h2>
+            </div>
+            <div class="box singer">
+                <h2>Bad Bunny</h2>
+            </div>
+
+            <div class="box song">
+                <h2>N95</h2>
+            </div>
+            <div class="box singer">
+                <h2>Kendrick Lamar</h2>
+            </div>
+            <div class="box song">
+                <h2>Saoko</h2>               
+            </div>
+            <div class="box singer">
+                <h2>Rosalía</h2>
+            </div>
+
+            <div class="box song">
+                <h2>Free Mind</h2>
+            </div>
+            <div class="box singer">
+                <h2>Tems</h2>
+            </div>
+
+            <div class="box song">
+                <h2>Boyfriend</h2>
+            </div>
+            <div class="box singer">
+                <h2>Dove Cameron</h2>
+            </div>
+
+
+        </div>
+
+        <div class="rankList">
+            <h2 class="rankNum">1</h2>
+            <h2 class="rankNum">2</h2>
+            <h2 class="rankNum">3</h2>
+            <h2 class="rankNum">4</h2>
+            <h2 class="rankNum">5</h2>
+            <h2 class="rankNum">6</h2>
+            <h2 class="rankNum">7</h2>
+            <h2 class="rankNum">8</h2>
+            <h2 class="rankNum">9</h2>
+            <h2 class="rankNum">10</h2>
+        </div>
+
     </main>
 
     <footer>
         <p>&copy; 2023 Musicane. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Flip.min.js"></script>
+
+    <script>
+
+        // 滑动动效
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.defaults({ ease: "power3" });
+        gsap.set(".box", { y: 200 });
+
+        ScrollTrigger.batch(".box", {
+            //interval: 0.1, // time window (in seconds) for batching to occur. 
+            //batchMax: 3,   // maximum batch size (targets)
+            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: { each: 0.15, grid: [1, 3] }, overwrite: true }),
+            onLeave: batch => gsap.set(batch, { opacity: 0, y: -200, overwrite: true }),
+            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+            onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 200, overwrite: true })
+            // you can also define things like start, end, etc.
+        });
+        // when ScrollTrigger does a refresh(), it maps all the positioning data which 
+        // factors in transforms, but in this example we're initially setting all the ".box"
+        // elements to a "y" of 100 solely for the animation in which would throw off the normal 
+        // positioning, so we use a "refreshInit" listener to reset the y temporarily. When we 
+        // return a gsap.set() in the listener, it'll automatically revert it after the refresh()!
+        ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".box", { y: 0 }));
+
+
+        // 鼠标悬停效果
+        gsap.defaults({ ease: "power3" });
+
+const boxes = document.querySelectorAll(".box.song");
+
+
+function handleMouseEnter() {
+    const index = Array.from(boxes).indexOf(this);
+    const correspondingSinger = document.querySelectorAll(".box.singer")[index];
+
+    gsap.to(this, { x: 100, duration: 0.3  });
+    gsap.to(correspondingSinger, { x: 100, duration: 0.3, delay: 0.2 });
+    gsap.to(".rankList", { opacity:1, duration: 0.3,x :-250 })
+
+}
+
+function handleMouseLeave() {
+    const index = Array.from(boxes).indexOf(this);
+    const correspondingSinger = document.querySelectorAll(".box.singer")[index];
+
+    gsap.to(this, { x: 0, duration: 0.3 });
+    gsap.to(correspondingSinger, { x: 0, duration: 0.3, delay: 0.2, });
+    gsap.to(".rankList", { opacity:0,  duration: 0.3, x : 0 })
+
+}
+
+boxes.forEach(box => {
+    box.addEventListener('mouseenter', handleMouseEnter);
+    box.addEventListener('mouseleave', handleMouseLeave);
+});
+
+
+
+    </script>
 </body>
 
 </html>
