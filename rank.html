@@ -22,10 +22,11 @@
             </ul>
         </nav>
 
-        <h2 class="title"> Rank of 2022 </h2>
+        <h2 class="title">Billboard Rank of 2022 </h2>
         <div class="container">
             <div class="box song">
                 <h2>Bad Habit</h2>
+                <img class="rank-img" src="asset/image/Bad Habit_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Steve Lacy</h2>
@@ -33,6 +34,7 @@
 
             <div class="box song">
                 <h2>Break My Soul</h2>
+                <img class="rank-img" src="asset/image/Break My Soul_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Beyoncé</h2>
@@ -40,6 +42,7 @@
 
             <div class="box song">
                 <h2>As It Was</h2>
+                <img class="rank-img" src="asset/image/As It Was_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Harry Styles</h2>
@@ -47,6 +50,7 @@
 
             <div class="box song">
                 <h2>About Damn Time</h2>
+                <img class="rank-img" src="asset/image/About Damn Time_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Lizzo</h2>
@@ -54,12 +58,14 @@
 
             <div class="box song">
                 <h2>Anti-Hero</h2>
+                <img class="rank-img" src="asset/image/Anti-Hero_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Taylor Swift</h2>
             </div>
             <div class="box song">
                 <h2>Tití Me Preguntó</h2>
+                <img class="rank-img" src="asset/image/Tití Me Preguntó_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Bad Bunny</h2>
@@ -67,12 +73,14 @@
 
             <div class="box song">
                 <h2>N95</h2>
+                <img class="rank-img" src="asset/image/N95_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Kendrick Lamar</h2>
             </div>
             <div class="box song">
-                <h2>Saoko</h2>               
+                <h2>Saoko</h2>
+                <img class="rank-img" src="asset/image/Saoko_cover.jpeg">               
             </div>
             <div class="box singer">
                 <h2>Rosalía</h2>
@@ -80,6 +88,7 @@
 
             <div class="box song">
                 <h2>Free Mind</h2>
+                <img class="rank-img" src="asset/image/Free Mind_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Tems</h2>
@@ -87,6 +96,7 @@
 
             <div class="box song">
                 <h2>Boyfriend</h2>
+                <img class="rank-img" src="asset/image/Boyfriend_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Dove Cameron</h2>
@@ -96,16 +106,16 @@
         </div>
 
         <div class="rankList">
-            <h2 class="rankNum">1</h2>
-            <h2 class="rankNum">2</h2>
-            <h2 class="rankNum">3</h2>
-            <h2 class="rankNum">4</h2>
-            <h2 class="rankNum">5</h2>
-            <h2 class="rankNum">6</h2>
-            <h2 class="rankNum">7</h2>
-            <h2 class="rankNum">8</h2>
-            <h2 class="rankNum">9</h2>
-            <h2 class="rankNum">10</h2>
+            <h2 class="rankNum">1.</h2>
+            <h2 class="rankNum">2.</h2>
+            <h2 class="rankNum">3.</h2>
+            <h2 class="rankNum">4.</h2>
+            <h2 class="rankNum">5.</h2>
+            <h2 class="rankNum">6.</h2>
+            <h2 class="rankNum">7.</h2>
+            <h2 class="rankNum">8.</h2>
+            <h2 class="rankNum">9.</h2>
+            <h2 class="rankNum">10.</h2>
         </div>
 
     </main>
@@ -153,21 +163,25 @@ const boxes = document.querySelectorAll(".box.song");
 function handleMouseEnter() {
     const index = Array.from(boxes).indexOf(this);
     const correspondingSinger = document.querySelectorAll(".box.singer")[index];
+    const rankImg = this.querySelector('.rank-img');
 
     gsap.to(this, { x: 100, duration: 0.3  });
-    gsap.to(correspondingSinger, { x: 100, duration: 0.3, delay: 0.2 });
+    gsap.to(correspondingSinger, { x: 234, duration: 0.3, delay: 0.2 });
     gsap.to(".rankList", { opacity:1, duration: 0.3,x :-250 })
+    gsap.to(rankImg, { scale: 1.25})
+    gsap.to(rankImg, {opacity: 1 ,duration: 0.4, x: 135, delay:0.2 })
 
 }
 
 function handleMouseLeave() {
     const index = Array.from(boxes).indexOf(this);
     const correspondingSinger = document.querySelectorAll(".box.singer")[index];
+    const rankImg = this.querySelector('.rank-img');
 
     gsap.to(this, { x: 0, duration: 0.3 });
     gsap.to(correspondingSinger, { x: 0, duration: 0.3, delay: 0.2, });
     gsap.to(".rankList", { opacity:0,  duration: 0.3, x : 0 })
-
+    gsap.to(rankImg, {opacity: 0 , duration: 0.4, x: 0 , scale: -1.3})
 }
 
 boxes.forEach(box => {

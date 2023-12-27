@@ -38,10 +38,22 @@
             </p>
         </div>
         <button id="nextButton">Jump to Next Page</button>
+        <div class="afterImage">
+
+            <!-- let's enjoy the music -->
+            <svg class="text_enjoy" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+              
+                <text x="10" y="35" class="small">Let's</text>
+                <text x="40" y="35" class="heavy">Enjoy</text>
+                <text x="45" y="55" class="small">the</text>
+                <text x="65" y="55" class="Rrrrr">Music!</text>
+              </svg>
+
+
+            <img src="asset/image/afterImage.png" alt="after">
+        </div>
     </div>
     <!-- END PAGE CONTEN 1-->
-
-    <svg></svg>
 
     <!-- PAGE CONTEN 2 -->
     <div class="container" id="page2">
@@ -64,27 +76,51 @@
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script>
         // 打字机效果
         let words = gsap.utils.toArray(".text_words"),
             tl = gsap.timeline({ delay: 0.5 }),
-            timePerCharacter = 0.05;
+            timePerCharacter = 0.015;
 
         words.forEach(el => {
             tl.from(el, { text: "", duration: el.innerHTML.length * timePerCharacter, ease: "none" });
         });
-    
+
 
         //标题出现
-       
-        gsap.from(".text_title",{
+
+        gsap.from(".text_title", {
             duration: 0.7,
             x: 500,
             y: 500,
-            opacity:0
+            opacity: 0
         })
 
 
+        //滚轮图片变换
+
+        gsap.utils.toArray("#imageContainer").forEach(section => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: section,
+                    start: "center center",
+                    // makes the height of the scrolling (while pinning) match the width, thus the speed remains constant (vertical/horizontal)
+                    end: () => "+=" + section.offsetWidth,
+                    scrub: true,
+                    pin: true,
+                    anticipatePin: 1
+                },
+                defaults: { ease: "none" }
+            });
+            // animate the container one way...
+            tl.fromTo(section.querySelector(".afterImage"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+                // ...and the image the opposite way (at the same time)
+                .fromTo(section.querySelector(".afterImage img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0)
+                .fromTo(text, { x: 250 }, { x: -250 }, 0)
+                .from(text.nextElementSibling, { scale: 0.8 }, 0)
+                
+        });
     </script>
 </body>
 

@@ -4,6 +4,7 @@ html, body {
     background-color: #121212;
     color: white;
     width: 100%;
+    overflow-x:hidden;
 }
 
 header {
@@ -44,7 +45,6 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px ;
     width: 100%;
 }
 
@@ -60,6 +60,7 @@ main {
 
 .panel_title{
     color: rgb(241, 244, 242);
+    margin-left: 20px;
     
 }
 

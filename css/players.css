@@ -2,10 +2,11 @@
 body {
   width: 100%;
   height: 100%;
+  overflow:hidden;
 }
 
 nav{
-  width: 100%;
+  width: 110%;
   z-index: 5;
 }
 
@@ -101,7 +102,7 @@ main {
   left: 20px;
 }
 .buttonPart_next{
-  right: 8px;
+  right: 20px;
   margin-left: 20px;
 }
 .person_name{
