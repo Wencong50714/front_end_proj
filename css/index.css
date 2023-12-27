@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -12,7 +13,8 @@ header {
 }
 
 h1 {
-    font-size: 50px; /* 替换为你希望的大小值 */
+    font-size: 50px;
+    /* 替换为你希望的大小值 */
 }
 
 nav ul {
@@ -40,7 +42,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px ;
+    padding: 20px;
     width: 100%;
 }
 
@@ -61,6 +63,7 @@ footer p {
 .card p {
     display: none;
 }
+
 /* 模态框样式 */
 #modal-container {
     display: none;
@@ -70,14 +73,14 @@ footer p {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-  }
-  
+}
+
 #modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background:rgba(46, 34, 34, 0.87);
+    background: rgba(46, 34, 34, 0.87);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -90,7 +93,7 @@ footer p {
     text-align: center;
 }
 
-#modal-artist{
+#modal-artist {
     text-align: center;
 }
 
@@ -107,22 +110,29 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* 为了让 absolute 定位相对于这个容器 */
-    transition: transform 2s ease; /* 添加过渡效果，调整时间和缓动函数以满足你的需求 */
+    position: relative;
+    /* 为了让 absolute 定位相对于这个容器 */
+    transition: transform 2s ease;
+    /* 添加过渡效果，调整时间和缓动函数以满足你的需求 */
     transform-origin: center;
-    transform: scale(0.5); /* 初始化时将图片缩小到0倍 */
+    transform: scale(0.5);
+    /* 初始化时将图片缩小到0倍 */
 }
 
 .container.loaded {
-    transform: scale(1); /* 加载完成后将图片缩放到正常大小 */
+    transform: scale(1);
+    /* 加载完成后将图片缩放到正常大小 */
 }
 
 .content {
     text-align: left;
-    color: #fff; /* 文字颜色，可以根据你的图片调整 */
+    color: #fff;
+    /* 文字颜色，可以根据你的图片调整 */
     position: absolute;
-    top: 10%; /* 25% 是相对于容器高度的上1/4位置 */
-    left: 10%; /* 25% 是相对于容器宽度的左1/4位置 */
+    top: 10%;
+    /* 25% 是相对于容器高度的上1/4位置 */
+    left: 10%;
+    /* 25% 是相对于容器宽度的左1/4位置 */
 }
 
 .content h1 {
@@ -137,21 +147,30 @@ footer p {
 
 button {
     background: transparent;
-    color: #888; /* 灰色字体 */
-    border: 2px solid rgba(255, 255, 255, 0.5); /* 半透明边框 */
-    border-radius: 5px; /* 圆角边框 */
+    color: #888;
+    /* 灰色字体 */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    /* 半透明边框 */
+    border-radius: 5px;
+    /* 圆角边框 */
     font-size: 1em;
-    padding: 10px 20px; /* 调整按钮内边距 */
+    padding: 10px 20px;
+    /* 调整按钮内边距 */
     cursor: pointer;
-    transition: color 0.3s, border-color 0.3s; /* 添加过渡效果 */
+    transition: color 0.3s, border-color 0.3s;
+    /* 添加过渡效果 */
 }
 
 button:hover {
-    color: #fff; /* 悬停时更改字体颜色 */
-    border-color: rgba(255, 255, 255, 0.8); /* 悬停时更改边框颜色 */
+    color: #fff;
+    /* 悬停时更改字体颜色 */
+    border-color: rgba(255, 255, 255, 0.8);
+    /* 悬停时更改边框颜色 */
 }
 
 #nextButton {
-    margin-top: auto; /* 将按钮推到容器的底部 */
-    margin-bottom: 100px; /* 与页面底部保持一些间隔 */
+    margin-top: auto;
+    /* 将按钮推到容器的底部 */
+    margin-bottom: 100px;
+    /* 与页面底部保持一些间隔 */
 }
