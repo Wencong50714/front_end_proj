@@ -80,7 +80,7 @@
             </div>
             <div class="box song">
                 <h2>Saoko</h2>
-                <img class="rank-img" src="asset/image/Saoko_cover.jpeg">               
+                <img class="rank-img" src="asset/image/Saoko_cover.jpeg">
             </div>
             <div class="box singer">
                 <h2>Rosalía</h2>
@@ -157,37 +157,38 @@
         // 鼠标悬停效果
         gsap.defaults({ ease: "power3" });
 
-const boxes = document.querySelectorAll(".box.song");
+        const boxes = document.querySelectorAll(".box.song");
 
 
-function handleMouseEnter() {
-    const index = Array.from(boxes).indexOf(this);
-    const correspondingSinger = document.querySelectorAll(".box.singer")[index];
-    const rankImg = this.querySelector('.rank-img');
+        function handleMouseEnter() {
+            const index = Array.from(boxes).indexOf(this);
+            const correspondingSinger = document.querySelectorAll(".box.singer")[index];
+            const rankImg = this.querySelector('.rank-img');
 
-    gsap.to(this, { x: 100, duration: 0.3  });
-    gsap.to(correspondingSinger, { x: 234, duration: 0.3, delay: 0.2 });
-    gsap.to(".rankList", { opacity:1, duration: 0.3,x :-250 })
-    gsap.to(rankImg, { scale: 1.25})
-    gsap.to(rankImg, {opacity: 1 ,duration: 0.4, x: 135, delay:0.2 })
+            gsap.to(this, { x: 100, duration: 0.3 }); //歌曲名字移动
+            gsap.to(correspondingSinger, { x: 234, duration: 0.3, delay: 0.2 }); //歌手名字移动
+            gsap.to(".rankList", { opacity: 1, duration: 0.3, x: -250 }) //排名number移动
+            gsap.set(rankImg, { opacity: 1, scale: 1.25, delay: 0.2 })  //专辑图片出现
+            gsap.to(rankImg, { duration: 0.4, x: 135, delay: 0.2 }) //专辑图片移动
 
-}
+        }
 
-function handleMouseLeave() {
-    const index = Array.from(boxes).indexOf(this);
-    const correspondingSinger = document.querySelectorAll(".box.singer")[index];
-    const rankImg = this.querySelector('.rank-img');
+        function handleMouseLeave() {
+            const index = Array.from(boxes).indexOf(this);
+            const correspondingSinger = document.querySelectorAll(".box.singer")[index];
+            const rankImg = this.querySelector('.rank-img');
 
-    gsap.to(this, { x: 0, duration: 0.3 });
-    gsap.to(correspondingSinger, { x: 0, duration: 0.3, delay: 0.2, });
-    gsap.to(".rankList", { opacity:0,  duration: 0.3, x : 0 })
-    gsap.to(rankImg, {opacity: 0 , duration: 0.4, x: 0 , scale: -1.3})
-}
+            gsap.to(this, { x: 0, duration: 0.3 });
+            gsap.to(correspondingSinger, { x: 0, duration: 0.3, delay: 0.2, });
+            gsap.to(".rankList", { opacity: 0, duration: 0.3, x: 0 })
+            gsap.to(rankImg, { duration: 0.2, x: 0, delay: 0.3 });
+            gsap.set(rankImg, { opacity: 0, scale: -1.3, duration: 0, delay: 0.3 })
+        }
 
-boxes.forEach(box => {
-    box.addEventListener('mouseenter', handleMouseEnter);
-    box.addEventListener('mouseleave', handleMouseLeave);
-});
+        boxes.forEach(box => {
+            box.addEventListener('mouseenter', handleMouseEnter);
+            box.addEventListener('mouseleave', handleMouseLeave);
+        });
 
 
 
