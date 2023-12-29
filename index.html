@@ -37,7 +37,8 @@
                 We bring you a curated experience that transcends boundaries and genres.
             </p>
         </div>
-        <button id="nextButton">Jump to Next Page</button>
+
+        <!-- <button id="nextButton">Jump to Next Page</button> -->
 
         <div class="arrow">
             <text>Scroll Down</text>
@@ -56,23 +57,35 @@
                 <text x="65" y="55" class="Rrrrr">Music!</text>
             </svg>
 
-            <img src="asset/image/afterImage.png" alt="after">            
+            <img src="asset/image/afterImage.png" alt="after">
         </div>
     </div>
     <!-- END PAGE CONTEN 1-->
 
     <!-- PAGE CONTEN 2 -->
     <div class="container white-bg" id="page2">
-        <div class="image-container left_top">
-            <img src="asset/image/About Damn Time_cover.jpeg" alt="Left Top Image">
+        <div class="slider left_top">
+
+            <img src="asset/image/About Damn Time_cover.jpeg" class="left_item item-1">
+            <img src="asset/image/Anti-Hero_cover.jpeg" class="left_item item-2">
+            <img src="asset/image/As It Was_cover.jpeg" class="left_item item-3">
+            <img src="asset/image/Bad Habit_cover.jpeg" class="left_item item-4">
+            <img src="asset/image/Boyfriend_cover.jpeg" class="left_item item-5">
+
         </div>
 
-        <div class="image-container right_bottom">
-            <img src="asset/image/Bad Habit_cover.jpeg" alt="Right Bottom Image">
+        <div class="slider right_bottom">
+
+            <img src="asset/image/危险派对_cover.jpeg" class="right_item item-1">
+            <img src="asset/image/绿洲_cover.jpeg" class="right_item item-2">
+            <img src="asset/image/烂醉_cover.jpeg" class="right_item item-3">
+            <img src="asset/image/燕尾服_cover.jpeg" class="right_item item-4">
+            <img src="asset/image/月_cover.jpeg" class="right_item item-5">
+
         </div>
 
         <div class="text-container left_bottom">
-            
+
             <p> TODO: <br><br><br>
                 1. Replace the img and corresponding lyrics <br><br><br>
                 2. Add animation to the img
@@ -144,32 +157,32 @@
 
         });
 
-// 叠加块动画实现
+        // 叠加块动画实现
 
-        const slider = document.querySelector(".slider");
-        const items = gsap.utils.toArray(".item");
-        const offset = 30;
+        const slider_1 = document.querySelector(".slider.left_top");
+        const items_1 = gsap.utils.toArray(".left_item");
+        const offset_1 = 30;
 
 
         function moveCard() {
-            const lastItem = slider.querySelector(".item:last-child");
+            const lastItem = slider_1.querySelector(".left_item:last-child");
 
-            if (slider && lastItem) {
+            if (slider_1 && lastItem) {
                 lastItem.style.display = "none"; // Hide the last item
                 const newItem = document.createElement("img");
                 newItem.className = lastItem.className; // Set the same class name
                 newItem.src = lastItem.src; // Copy the text content
-                slider.insertBefore(newItem, slider.firstChild); // Insert the new item at the beginning of the slider
+                slider_1.insertBefore(newItem, slider_1.firstChild); // Insert the new item at the beginning of the slider
             }
         }
 
-        document.body.addEventListener("click", (e) => {
-            let state = Flip.getState(".item");
+        slider_1.addEventListener("click", (e) => {
+            let state = Flip.getState(".left_item");
 
             moveCard();
 
             Flip.from(state, {
-                targets: ".item",
+                targets: ".left_item",
                 ease: "sine.inOut",
                 absolute: true,
                 onEnter: (elements) => {
@@ -188,7 +201,7 @@
                         ease: "sine.out",
                         onComplete() {
                             console.log("logging", element[0])
-                            slider.removeChild(element[0]);
+                            slider_1.removeChild(element[0]);
                         }
                     });
                 }
@@ -197,7 +210,54 @@
 
 
 
+        const slider_2 = document.querySelector(".slider.right_bottom");
+        const items_2 = gsap.utils.toArray(".right_item");
+        const offset_2 = 30;
 
+
+        function moveCard_2() {
+            const lastItem_2 = slider_2.querySelector(".right_item:last-child");
+
+            if (slider_2 && lastItem_2) {
+                lastItem_2.style.display = "none"; // Hide the last item
+                const newItem_2 = document.createElement("img");
+                newItem_2.className = lastItem_2.className; // Set the same class name
+                newItem_2.src = lastItem_2.src; // Copy the text content
+                slider_2.insertBefore(newItem_2, slider_2.firstChild); // Insert the new item at the beginning of the slider
+            }
+        }
+
+        slider_2.addEventListener("click", (e) => {
+            let state_2 = Flip.getState(".right_item");
+
+            moveCard_2();
+
+            Flip.from(state_2, {
+                targets: ".right_item",
+                ease: "sine.inOut",
+                absolute: true,
+                onEnter: (elements) => {
+                    return gsap.from(elements, {
+                        yPercent: 20,
+                        opacity: 0,
+                        ease: "sine.out"
+                    });
+                },
+                onLeave: (element) => {
+                    return gsap.to(element, {
+                        yPercent: 20,
+                        xPercent: -20,
+                        transformOrigin: "bottom left",
+                        opacity: 0,
+                        ease: "sine.out",
+                        onComplete() {
+                            console.log("logging", element[0])
+                            slider_2.removeChild(element[0]);
+                        }
+                    });
+                }
+            });
+        });
 
 
     </script>

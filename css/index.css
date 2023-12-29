@@ -101,7 +101,7 @@ footer p {
     top: 10%;
     /* 25% 是相对于容器高度的上1/4位置 */
     left: 10%;
-    /* 25% 是相对于容器宽度的左1/4位置 */   
+    /* 25% 是相对于容器宽度的左1/4位置 */
 }
 
 .content h1 {
@@ -191,9 +191,12 @@ button:hover {
 .image-container {
     position: absolute;
     overflow: hidden;
-    width: 250px; /* 请替换为您希望的固定宽度 */
-    height: 300px; /* 请替换为您希望的固定高度 */
-    border: 2px solid #ccc; /* 设置容器的边框 */
+    width: 250px;
+    /* 请替换为您希望的固定宽度 */
+    height: 300px;
+    /* 请替换为您希望的固定高度 */
+    border: 2px solid #ccc;
+    /* 设置容器的边框 */
 }
 
 .image-container img {
@@ -235,7 +238,7 @@ button:hover {
     left: 50%;
 }
 
-  .arrow{
+.arrow {
     font-size: 20px;
     color: white;
     position: absolute;
@@ -246,4 +249,91 @@ button:hover {
     justify-content: space-around;
     height: 60px;
     margin-top: auto;
-  }
+}
+
+/* 叠加块 */
+
+.slider.left_top {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    perspective: 100px;
+    cursor: pointer;
+    top: 20%;
+    left: 15%;
+}
+
+.slider.right_bottom {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    perspective: 100px;
+    cursor: pointer;
+    top: 60%;
+    left: 62%;
+}
+
+.left_item,
+.right_item {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: blue;
+    /* // transition: all 0.6s ease; // ⚠️ Never use 'all' and try to not use transtion when working with GSAP  */
+}
+
+.left_item:nth-child(5) {
+    left: 0px;
+    top: 0;
+}
+
+.left_item:nth-child(4) {
+    left: 20px;
+    top: -20px;
+}
+
+.left_item:nth-child(3) {
+    left: 40px;
+    top: -40px;
+}
+
+.left_item:nth-child(2) {
+    left: 60px;
+    top: -60px;
+}
+
+.left_item:nth-child(1) {
+    left: 80px;
+    top: -80px;
+}
+
+
+
+.right_item:nth-child(5) {
+    left: 0px;
+    top: 0;
+}
+
+.right_item:nth-child(4) {
+    left: 20px;
+    top: -20px;
+}
+
+.right_item:nth-child(3) {
+    left: 40px;
+    top: -40px;
+}
+
+.right_item:nth-child(2) {
+    left: 60px;
+    top: -60px;
+}
+
+.right_item:nth-child(1) {
+    left: 80px;
+    top: -80px;
+}
