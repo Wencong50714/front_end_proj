@@ -69,19 +69,23 @@ footer p {
     height: 100%;
     width: 100%;
     background-image: url("../asset/index/cover.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    /* 为了让 absolute 定位相对于这个容器 */
-    /* transition: transform 2s ease; */
-    /* 添加过渡效果，调整时间和缓动函数以满足你的需求 */
+}
+
+.white-bg {
+    background-color: white !important;
+}
+
+.image-bg {
+    background-image: url("../asset/index/cover.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     transform-origin: center;
     transform: scale(0.5);
-    /* 初始化时将图片缩小到0倍 */
 }
 
 .container.loaded {
@@ -97,7 +101,7 @@ footer p {
     top: 10%;
     /* 25% 是相对于容器高度的上1/4位置 */
     left: 10%;
-    /* 25% 是相对于容器宽度的左1/4位置 */
+    /* 25% 是相对于容器宽度的左1/4位置 */   
 }
 
 .content h1 {
@@ -184,50 +188,50 @@ button:hover {
     font: italic 40px serif;
 }
 
-
-
-
-
-/* 叠加块 */
-
-.slider {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    perspective: 100px;
-    cursor: pointer;
-  }
-  
-  .item {
+.image-container {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    background-color: blue;
-    /* // transition: all 0.6s ease; // ⚠️ Never use 'all' and try to not use transtion when working with GSAP  */
-  }
-  
-  .item:nth-child(5) {
-   left: 800px;
-   top: 0;
-  }
-  .item:nth-child(4) {
-   left: 820px;
-   top: -20px;
-   }
-  .item:nth-child(3) {
-   left: 840px;
-   top: -40px;
-  }
-  .item:nth-child(2) {
-   left: 860px;
-   top: -60px;
-  }
-  .item:nth-child(1) {
-   left: 880px;
-   top: -80px;
-  }
+    overflow: hidden;
+    width: 250px; /* 请替换为您希望的固定宽度 */
+    height: 300px; /* 请替换为您希望的固定高度 */
+    border: 2px solid #ccc; /* 设置容器的边框 */
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    text-align: left;
+    position: absolute;
+}
+
+.text-container p {
+    font-family: 'Dancing Script', cursive;
+    color: #ccc;
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.left_top {
+    top: 10%;
+    left: 15%;
+}
+
+.right_bottom {
+    top: 55%;
+    left: 55%;
+}
+
+.left_bottom {
+    top: 55%;
+    left: 20%;
+}
+
+.right_top {
+    top: 10%;
+    left: 50%;
+}
 
