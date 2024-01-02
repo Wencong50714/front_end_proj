@@ -9,22 +9,29 @@ html {
 .container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* 可以根据需要调整图像的样式 */
 .image {
     width: auto; /* 设置图片宽度 */
-    height: 40em; /* 保持宽高比 */
+    height: 28em; /* 保持宽高比 */
 }
 
 
 .output {
     white-space: pre-wrap;
     color: #F4FFFC;
+    line-height: 0.8; /* 根据需要调整行间距，1表示默认行高 */
   }
 
 /* Define colors for ANSI escape codes */
-.red { color: #ED7680; }
+.red { 
+    color: #ED7680; 
+    font-weight: bold;
+    border-radius: 8px; /* 可根据需要调整圆润度 */
+    padding: 4px; /* 可根据需要调整内边距 */
+}
 .green { color: #50fa7b; }
 .yellow { color: #f1fa8c; }
 .purple { color: #bd93f9; }
