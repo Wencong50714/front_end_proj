@@ -137,11 +137,10 @@ button:hover {
     /* 悬停时更改边框颜色 */
 }
 
-#nextButton {
-    margin-top: auto;
-    /* 将按钮推到容器的底部 */
-    margin-bottom: 100px;
-    /* 与页面底部保持一些间隔 */
+#backButton {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
 }
 
 .afterImage {
