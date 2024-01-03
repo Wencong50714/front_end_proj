@@ -1,0 +1,98 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 可以根据需要调整图像的样式 */
+.image {
+    width: auto; /* 设置图片宽度 */
+    height: 28em; /* 保持宽高比 */
+}
+
+
+.output {
+    white-space: pre-wrap;
+    color: #F4FFFC;
+    line-height: 0.8; /* 根据需要调整行间距，1表示默认行高 */
+  }
+
+/* Define colors for ANSI escape codes */
+.red { 
+    color: #ED7680; 
+    font-weight: bold;
+    border-radius: 8px; /* 可根据需要调整圆润度 */
+    padding: 4px; /* 可根据需要调整内边距 */
+}
+.green { color: #50fa7b; }
+.yellow { color: #f1fa8c; }
+.purple { color: #bd93f9; }
+.blue { color: #8be9fd; }
+.orange { color: #ffb86c; }
+.gray { color: #6272a4; }
+
+.body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 50px;
+    /* 替换为你希望的大小值 */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 10px 0;
+}
+
+nav ul li {
+    padding: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+}
+
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #666;
+}
