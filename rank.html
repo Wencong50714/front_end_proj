@@ -145,13 +145,7 @@
             onLeave: batch => gsap.set(batch, { opacity: 0, y: -200, overwrite: true }),
             onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
             onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 200, overwrite: true })
-            // you can also define things like start, end, etc.
         });
-        // when ScrollTrigger does a refresh(), it maps all the positioning data which 
-        // factors in transforms, but in this example we're initially setting all the ".box"
-        // elements to a "y" of 100 solely for the animation in which would throw off the normal 
-        // positioning, so we use a "refreshInit" listener to reset the y temporarily. When we 
-        // return a gsap.set() in the listener, it'll automatically revert it after the refresh()!
         ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".box", { y: 0 }));
 
 

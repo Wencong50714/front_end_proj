@@ -10,12 +10,37 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
-/* 可以根据需要调整图像的样式 */
+.image-content{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 250px;
+    left: 23%;
+
+}
+
+.text{
+    width: 15em; /* 设置图片宽度 */
+    height: auto; /* 保持宽高比 */
+}
+
+.icon{
+    height: 70px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
 .image {
     width: auto; /* 设置图片宽度 */
-    height: 28em; /* 保持宽高比 */
+    height: 24em; /* 保持宽高比 */
+    border-radius: 10%;
+    top:40px;
+    position: relative;
+    margin-right: 20px;
 }
 
 
@@ -23,14 +48,15 @@ html {
     white-space: pre-wrap;
     color: #F4FFFC;
     line-height: 0.8; /* 根据需要调整行间距，1表示默认行高 */
+    margin: 20px;
   }
 
 /* Define colors for ANSI escape codes */
 .red { 
     color: #ED7680; 
     font-weight: bold;
-    border-radius: 8px; /* 可根据需要调整圆润度 */
-    padding: 4px; /* 可根据需要调整内边距 */
+    border-radius: 8px; 
+    padding: 4px; 
 }
 .green { color: #50fa7b; }
 .yellow { color: #f1fa8c; }
@@ -51,7 +77,6 @@ header {
 
 h1 {
     font-size: 50px;
-    /* 替换为你希望的大小值 */
 }
 
 nav ul {
@@ -95,4 +120,22 @@ footer {
 footer p {
     margin: 0;
     color: #666;
+}
+
+/* 按钮 */
+#githubButton {
+    background-color: #24292e; /* GitHub color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    left: 50%;
+    position: relative;
+    top: 20%;
+}
+
+#githubButton:hover {
+    background-color: #1e2226; /* Darker GitHub color on hover */
 }
