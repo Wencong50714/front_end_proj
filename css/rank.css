@@ -98,6 +98,9 @@ footer p {
     width: 500px;
     border-radius: 15px 0 0 15px;
     font: italic 30px serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
 }
 
 
@@ -108,23 +111,22 @@ footer p {
 
 
 .rankNum{
-    height: 149.6px;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    /* height: 15vh; */
+    /* margin-top: 7px;
+    margin-bottom: 7px; */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 30px;
-    position: absolute;
     font-size: 60px;
     font-weight: bold;
     color: aquamarine;
     z-index: -1;
     position: relative;
-    top: 55px;
+    /* left: 50px; */
     width: 30px;
-    left: 50px;
+
     /* opacity: 0; */
 }
 
