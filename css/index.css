@@ -114,6 +114,8 @@ footer p {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+
+
 button {
     background: transparent;
     color: #888;
@@ -217,6 +219,12 @@ button:hover {
     line-height: 27px;
 }
 
+.text-container pre{
+    font-size: 30px;
+    line-height: 27px;
+    color: white;
+}
+
 .left_top {
     top: 10%;
     left: 15%;
@@ -229,7 +237,7 @@ button:hover {
 
 .left_bottom {
     top: 55%;
-    left: 20%;
+    left: 25%;
 }
 
 .right_top {

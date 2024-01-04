@@ -17,7 +17,7 @@ html {
     display: flex;
     flex-direction: row;
     position: absolute;
-    top: 250px;
+    top: 200px;
     left: 23%;
 
 }
@@ -132,10 +132,27 @@ footer p {
     cursor: pointer;
     transition: background-color 0.3s;
     left: 50%;
-    position: relative;
+    position: absolute;
     top: 20%;
 }
 
 #githubButton:hover {
     background-color: #1e2226; /* Darker GitHub color on hover */
 }
+
+/* 页面进入动画 */
+
+.fadeIn {
+    opacity: 1;
+    animation: fadeInAnimation 1s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

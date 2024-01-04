@@ -4,3 +4,9 @@ document.getElementById('githubButton').addEventListener('click', function() {
     window.open(githubRepoUrl, '_blank');
 });
 })
+
+//页面进入动画
+document.addEventListener("DOMContentLoaded", function() {
+    const container = document.querySelector('.container');
+    container.classList.add('fadeIn');
+});
