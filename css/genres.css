@@ -19,7 +19,13 @@ header {
     border: none;
     color: white;
 }
-
+#Logo {
+    height: 30px; 
+}
+#navLogo{
+    left: 20px;
+    position:absolute;
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -28,10 +34,13 @@ nav ul {
     justify-content: center;
     background: #222;
     padding: 10px 0;
+    height: 35px;
 }
 
 nav ul li {
     padding: 0 20px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
 }
 
 nav ul li a {
@@ -50,9 +59,9 @@ main {
 
 .recommendations{
     height: 900px;
-    background-color:rgb(28, 24, 24);
+    background-color:#292c33;
     width: 100%;
-    background-image: none;
+    /* background-image: none; */
 }
 .recommendations h2 {
     margin-bottom: 40px;
@@ -80,11 +89,14 @@ main {
 
 .card {
     flex: 0 0 auto; /* 卡片不伸缩，保持原始宽度 */
-    background: #1a1a1a;
-    padding: 15px;
+    background: rgb(204 211 226 / 8%);
     width: 250px; /* 根据需要调整卡片的宽度 */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin-right: 10px; /* 卡片之间的右侧间距 */
+}
+
+h3,h5 {
+    margin: 15px;
 }
 
 .image-placeholder {
@@ -97,7 +109,7 @@ main {
 .card-image {
     width: 100%; /* Ensures the image is as wide as the card */
     height: 250px; /* Fixes the height of the image */
-    border-radius: 10px; /* Rounds the corners of the image */
+    /* border-radius: 10px;  */
     object-fit: cover; /* Covers the area without stretching the image, cropping if necessary */
 }
 

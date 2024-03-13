@@ -6,19 +6,19 @@ html {
     background-color: #121212;
 }
 
-.body {
+body {
     overflow-x: hidden;
     width: 100%;
 }
 
-header {
-    background: #1f1f1f;
-    padding: 10px;
-}
 
-h1 {
-    font-size: 50px;
-    /* 替换为你希望的大小值 */
+
+#Logo {
+    height: 30px; 
+}
+#navLogo{
+    left: 20px;
+    position:absolute;
 }
 
 nav ul {
@@ -29,10 +29,13 @@ nav ul {
     justify-content: center;
     background: #222;
     padding: 10px 0;
+    height: 35px;
 }
 
 nav ul li {
     padding: 0 20px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
 }
 
 nav ul li a {
@@ -68,15 +71,18 @@ footer p {
 .container {
     height: 100%;
     width: 100%;
-    background-image: url("../asset/index/cover.jpeg");
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
+#page1 {
+    background-image: url("../asset/index/cover.jpeg");
+}
+
 .white-bg {
-    background-color: white !important;
+    background-color: #E7E7E7;
 }
 
 .image-bg {
@@ -104,9 +110,6 @@ footer p {
     /* 25% 是相对于容器宽度的左1/4位置 */
 }
 
-.content h1 {
-    font-size: 50px;
-}
 
 .content p {
     font-size: 18px;
@@ -143,6 +146,9 @@ button:hover {
     position: absolute;
     right: 5%;
     bottom: 5%;
+    color: #fff;
+    font-size: 25px;
+
 }
 
 .afterImage {
@@ -170,6 +176,8 @@ button:hover {
     z-index: 2;
 }
 
+
+
 .small {
     font: bold 13px serif;
     fill: black;
@@ -185,10 +193,14 @@ button:hover {
     fill: rgb(117, 238, 25);
 }
 
-.text_word {
-    font: italic 40px serif;
+.text_words {
+    font: italic 18px serif;
 }
 
+.text_title {
+    font-size: 80px;
+    font-family: "Slackside One", cursive;
+}
 .image-container {
     position: absolute;
     overflow: hidden;
@@ -207,23 +219,6 @@ button:hover {
     object-fit: cover;
 }
 
-.text-container {
-    text-align: left;
-    position: absolute;
-}
-
-.text-container p {
-    font-family: 'Dancing Script', cursive;
-    color: #ccc;
-    font-size: 24px;
-    line-height: 27px;
-}
-
-.text-container pre{
-    font-size: 30px;
-    line-height: 27px;
-    color: white;
-}
 
 .left_top {
     top: 10%;
@@ -249,7 +244,7 @@ button:hover {
     font-size: 20px;
     color: white;
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -262,29 +257,29 @@ button:hover {
 
 .slider.left_top {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     perspective: 100px;
     cursor: pointer;
-    top: 20%;
+    top: 45%;
     left: 15%;
 }
 
 .slider.right_bottom {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     perspective: 100px;
     cursor: pointer;
-    top: 60%;
-    left: 62%;
+    top: 45%;
+    right: 15%;
 }
 
 .left_item,
 .right_item {
     position: absolute;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;

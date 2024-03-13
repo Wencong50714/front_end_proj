@@ -7,11 +7,6 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background: #1f1f1f;
-    padding: 10px;
-}
-
 .search-container input[type="search"] {
     width: 100%;
     padding: 10px;
@@ -20,6 +15,14 @@ header {
     color: white;
 }
 
+
+#Logo {
+    height: 30px; 
+}
+#navLogo{
+    left: 20px;
+    position:absolute;
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -28,10 +31,14 @@ nav ul {
     justify-content: center;
     background: #222;
     padding: 10px 0;
+    height: 35px;
+    width: 100%;
 }
 
 nav ul li {
     padding: 0 20px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
 }
 
 nav ul li a {
@@ -45,7 +52,6 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
     width: 100%;
 }
 

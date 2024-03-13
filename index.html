@@ -15,6 +15,9 @@
     <!-- Font theme-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zhi Mang Xing">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slackside+One&display=swap" rel="stylesheet">
 
 </head>
 
@@ -22,6 +25,7 @@
     <!-- HEADER -->
     <nav id="top">
         <ul>
+            <li id="navLogo"><a href="./index.html"><img id="Logo" src="./asset/index/Logo.png"></a></li>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./genres.html">Genres</a></li>
             <li><a href="./players.html">Players</a></li>
@@ -47,20 +51,6 @@
             <i class="fa-solid fa-chevron-down fa-flip fa-lg"></i>
         </div>
 
-
-        <div class="afterImage">
-
-            <!-- let's enjoy the music -->
-            <svg class="text_enjoy" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
-
-                <text x="10" y="35" class="small">Let's</text>
-                <text x="40" y="35" class="heavy">Enjoy</text>
-                <text x="45" y="55" class="small">the</text>
-                <text x="65" y="55" class="Rrrrr">Music!</text>
-            </svg>
-
-            <img src="asset/image/afterImage.png" alt="after">
-        </div>
     </div>
     <!-- END PAGE CONTEN 1-->
 
@@ -86,26 +76,30 @@
 
         </div>
 
-        <div class="text-container left_bottom">
+        
 
-            <pre style="font-family: 'Zhi Mang Xing', serif;">
-音符飘逸，诗意编织<br><br><br>
-歌声深情，心事悠长<br><br><br>
-旋律轻扬，记忆停留<br><br><br>
-            </pre>
-        </div>
-
-        <div class="text-container right_top">
-            <p> Turn up the music, turn down the lights <br><br><br>
-                I got a feelin' I'm gon' be alright<br><br><br>
-                Okay (Okay), alright<br><br><br>
-                It's about damn time (Time)<br><br><br>
-            </p>
-        </div>
-        <button id="backButton">Back to Top</button>
     </div>
     <!-- END PAGE CONTEN 2-->
 
+    <!-- PAGE CONTEN 3-->
+    <div class="container changeImage" id="page3">
+        <div class="afterImage">
+
+            <!-- let's enjoy the music -->
+            <svg class="text_enjoy" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+
+                <text x="10" y="35" class="small">Let's</text>
+                <text x="40" y="35" class="heavy">Enjoy</text>
+                <text x="45" y="55" class="small">the</text>
+                <text x="65" y="55" class="Rrrrr">Music!</text>
+            </svg>
+
+            <img src="asset/image/afterImage.png" alt="after">
+        </div>
+        <button id="backButton">Back to Top</button>
+    </div>
+
+    <!-- END PAGE CONTEN 3-->
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2023 Musicane. All rights reserved.</p>
@@ -140,7 +134,7 @@
 
         //滚轮图片变换
 
-        gsap.utils.toArray("#imageContainer").forEach(section => {
+        gsap.utils.toArray("#page3").forEach(section => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
