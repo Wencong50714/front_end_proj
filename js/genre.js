@@ -63,12 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //按钮
 document.addEventListener("DOMContentLoaded", function () {
-    var backButton = document.getElementById('backButton_1');
-    backButton.addEventListener('click', function () {
-        // 使用 smooth 滚动效果回到页面顶部
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    var backButtonList = document.querySelectorAll(".backButton");
+
+    // 为每个 backButton 添加事件监听器
+    backButtonList.forEach(function (backButton) {
+        backButton.addEventListener('click', function () {
+            // 使用 smooth 滚动效果回到页面顶部
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     });
 });
+

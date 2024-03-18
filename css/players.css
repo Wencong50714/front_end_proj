@@ -6,10 +6,18 @@ body {
 }
 
 nav{
-  width: 110%;
-  z-index: 1;
+  width: 100%;
+  
 }
 
+
+#topNav{
+  position: absolute;
+  top: 0%;
+  z-index: 10;
+  width: 100%;
+  z-index: 3;
+}
 nav ul {
   list-style: none;
   padding: 0;
@@ -97,7 +105,7 @@ main {
   justify-content: center; /* 水平居中 */
   flex-direction: column;  /* 把元素垂直排列 */
   position: absolute;
-  z-index: 2;
+  z-index: 10;
 }
 
 .button_next, .button_prev{
@@ -141,7 +149,7 @@ img {
   width: 1000px;
   background: rgb(32, 36, 31);
   position: relative;
-  overflow: auto;
+  overflow:auto;
   margin-top: 80px;
   margin-left: 200px;
   margin-right: 80px;
@@ -159,6 +167,9 @@ img {
 .item {
   cursor: pointer;
   font-size: 0;
+  box-sizing: border-box; /* 设置盒子模型为border-box，使边框不影响元素的尺寸 */
+        border: 2px solid transparent; /* 初始时设置透明边框 */
+
 }
 
 .detail {
@@ -204,6 +215,34 @@ img {
 .detail .description {
   line-height: 1.5;
 }
+
+.playIcon{
+  position: absolute;
+  top: 181px;
+  z-index: 10;
+  color: #fff;
+  
+}
+
+.playIcon img {
+  width: 40px;
+  height: auto;
+  color: (204 211 226 / 8%);
+  opacity: 0; /* 初始状态完全透明 */
+  visibility: hidden; /* 初始状态不可见 */
+  left: -30px; /* 初始状态在卡片左侧外部 */
+  position: absolute;
+/* 
+  transform: translateY(-50%); */
+}
+
+.item:hover {
+  border: 2px solid rgb(241, 241, 245); /* 更改卡片边框样式 */
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(248, 247, 247, 0.5); /* 添加阴影效果 */
+  filter: brightness(110%);
+}
+
 
 footer {
   background: #1f1f1f;

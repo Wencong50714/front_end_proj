@@ -18,48 +18,81 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <ul>
-            <li id="navLogo"><a href="./index.html"><img id="Logo" src="./asset/index/Logo.png"></a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./genres.html">Genres</a></li>
-            <li><a href="./players.html">Players</a></li>
-            <li><a href="./rank.html">Rank</a></li>
-            <li><a href="./gitinfo.html">Repository info</a></li>
-    </nav>
+    <!-- HEADER -->
+    <div id="topNav">
+        <nav id="top">
+            <ul>
+                <li id="navLogo"><a href="./index.html"><img id="Logo" src="./asset/index/Logo.png"></a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./genres.html">Genres</a></li>
+                <li><a href="./players.html">Players</a></li>
+                <li><a href="./rank.html">Rank</a></li>
+                <li><a href="./gitinfo.html">Repository info</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- END HEADER  -->
 
     <div class="container">
-        <button id="githubButton">Explore Our GitHub Project</button>
-        <!-- 图像 -->
-        <div class="image-content">
-            <img src="asset/index/github.svg" alt="icon" class="icon">
-            <img src="asset/index/GitHub_副本.svg" alt="Your Image" class="text">
+
+        <div class="part_left">
+
+            <!-- 图像 -->
+            <div class="image-content">
+                <img src="asset/index/github.svg" alt="icon" class="icon">
+                <img src="asset/index/GitHub_副本.svg" alt="Your Image" class="text">
+            </div>
+
+            <img src="asset/cover/cover.webp" class="image">
+
         </div>
+        <div class="part_right">
 
-        <img src="asset/cover/cover.webp" class="image">
+            <!-- 按钮 -->
+            <button id="githubButton">Explore Our GitHub Project</button>
 
-        <!-- 文本 -->
-        <div class="output">
-            <br><span class="red"> Project</span>: front_end_proj (1 branch)
-            <br><span class="red"> HEAD</span>: 1d3af22 (master, origin/master)
-            <br><span class="red"> Created</span>: 2 months ago
-            <br><span class="red"> Languages</span>: 🟨🟨🟨🟨🟨🟨🟨🟪🟪🟪⬜️
-            <br> <span class="orange"> ●</span> HTML (65.4 %) <span class="purple"> ●</span> CSS (31.9 %)
-            <br> <span class="gray"> ●</span> JavaScript (2.7 %)
-            <br><span class="red"> Authors</span>: 
-            <br>            ● 51% dwg 19
-            <br>            ● 49% czh 18
-            <br><span class="red"> Last change</span>: 5 hours ago
-            <br><span class="red"> URL</span>: git@github.com:Wencong50714/front_end_proj.git
-            <br><span class="red"> Commits</span>: 37
-            <br><span class="red"> Churn (6)</span>:
-            <br>            css/index.css 5
-            <br>            index.html 5
-            <br>            css/genres.css 3
-            <br><span class="red"> Lines of code</span>: 2685
-            <br><span class="red"> Size</span>: 12.61 MiB (111 files)
+            <!-- 文本 -->
+            <div class="output">
+                <br><span class="red"> Project</span>: front_end_proj (1 branch)
+                <br><span class="red"> HEAD</span>: 1d3af22 (master, origin/master)
+                <br><span class="red"> Created</span>: 2 months ago
+                <br><span class="red"> Languages</span>: 🟨🟨🟨🟨🟨🟨🟨🟪🟪🟪⬜️
+                <br> <span class="orange"> ●</span> HTML (65.4 %) <span class="purple"> ●</span> CSS (31.9 %)
+                <br> <span class="gray"> ●</span> JavaScript (2.7 %)
+                <br><span class="red"> Authors</span>:
+                <br> ● 51% dwg 19
+                <br> ● 49% czh 18
+                <br><span class="red"> Last change</span>: 5 hours ago
+                <br><span class="red"> URL</span>: git@github.com:Wencong50714/front_end_proj.git
+                <br><span class="red"> Commits</span>: 37
+                <br><span class="red"> Churn (6)</span>:
+                <br> css/index.css 5
+                <br> index.html 5
+                <br> css/genres.css 3
+                <br><span class="red"> Lines of code</span>: 2685
+                <br><span class="red"> Size</span>: 12.61 MiB (111 files)
+            </div>
         </div>
     </div>
+    <!--脚本-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script>
+
+        // 导航栏跟随
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            triggr: "#top",
+            start: "top top",
+            end: "+=800px",
+            pin: "#topNav",
+            markers: true,
+        });
+    </script>
+
+    <!-- END 脚本-->
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2023 Musicane. All rights reserved.</p>

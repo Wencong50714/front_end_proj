@@ -23,16 +23,18 @@
 
 <body>
     <!-- HEADER -->
-    <nav id="top">
-        <ul>
-            <li id="navLogo"><a href="./index.html"><img id="Logo" src="./asset/index/Logo.png"></a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./genres.html">Genres</a></li>
-            <li><a href="./players.html">Players</a></li>
-            <li><a href="./rank.html">Rank</a></li>
-            <li><a href="./gitinfo.html">Repository info</a></li>
-        </ul>
-    </nav>
+    <div id="topNav">
+        <nav id="top">
+            <ul>
+                <li id="navLogo"><a href="./index.html"><img id="Logo" src="./asset/index/Logo.png"></a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./genres.html">Genres</a></li>
+                <li><a href="./players.html">Players</a></li>
+                <li><a href="./rank.html">Rank</a></li>
+                <li><a href="./gitinfo.html">Repository info</a></li>
+            </ul>
+        </nav>
+    </div>
     <!-- END HEADER  -->
 
     <!-- PAGE CONTEN 1 -->
@@ -56,6 +58,10 @@
 
     <!-- PAGE CONTEN 2 -->
     <div class="container white-bg" id="page2">
+
+        <div>
+            <img src="asset/index/vinyl-2241789_1280.png" id="imageOfPage">
+        </div>
         <div class="slider left_top">
 
             <img src="asset/image/About Damn Time_cover.jpeg" class="left_item item-1">
@@ -76,13 +82,25 @@
 
         </div>
 
-        
+
 
     </div>
     <!-- END PAGE CONTEN 2-->
 
     <!-- PAGE CONTEN 3-->
-    <div class="container changeImage" id="page3">
+
+    <div class="container" id="page3">
+
+
+
+
+
+    </div>
+
+    <!-- END PAGE CONTEN 3-->
+
+    <!-- PAGE CONTEN 4-->
+    <div class="container changeImage" id="page4">
         <div class="afterImage">
 
             <!-- let's enjoy the music -->
@@ -106,6 +124,7 @@
     </footer>
     <!-- END FOOTER -->
 
+    <!--脚本代码 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
@@ -131,10 +150,23 @@
             opacity: 0
         })
 
+        // 导航栏跟随
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            triggr: "#top",
+            start: "top top",
+            end: "+=6000px",
+            pin: "#topNav",
+            markers: true,
+            pinSpacing: false,
+        });
+
 
         //滚轮图片变换
 
-        gsap.utils.toArray("#page3").forEach(section => {
+        gsap.utils.toArray("#page4").forEach(section => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,
@@ -257,7 +289,10 @@
         });
 
 
+
     </script>
+
+    <!-- END 脚本代码-->
 </body>
 
 </html>
