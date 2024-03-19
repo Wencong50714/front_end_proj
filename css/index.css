@@ -97,7 +97,7 @@ footer p {
 #page4 {
     background-image: url("../asset/index/equalizer-153212_1920.png");
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
 }
 .white-bg {
     background-color: #E7E7E7;
@@ -136,38 +136,69 @@ footer p {
 }
 
 
-
-button {
-    background: transparent;
-    color: #888;
-    /* 灰色字体 */
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    /* 半透明边框 */
-    border-radius: 5px;
-    /* 圆角边框 */
-    font-size: 1em;
-    padding: 10px 20px;
-    /* 调整按钮内边距 */
-    cursor: pointer;
-    transition: color 0.3s, border-color 0.3s;
-    /* 添加过渡效果 */
-}
-
-button:hover {
-    color: #fff;
-    /* 悬停时更改字体颜色 */
-    border-color: rgba(255, 255, 255, 0.8);
-    /* 悬停时更改边框颜色 */
-}
+/*按钮设置*/
 
 #backButton {
     position: absolute;
-    right: 5%;
+    right: 45%;
     bottom: 5%;
-    color: #fff;
-    font-size: 25px;
-
 }
+.btn {
+    --color: #92cb6c;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 12px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+   /* END 按钮设置*/
 
 .afterImage {
     position: absolute;
@@ -258,7 +289,9 @@ button:hover {
     left: 50%;
 } */
 
-.arrow {
+/* learn-more 按钮 */
+
+/* .learn-more {
     font-size: 20px;
     color: white;
     position: absolute;
@@ -269,7 +302,96 @@ button:hover {
     justify-content: space-around;
     height: 60px;
     margin-top: auto;
-}
+} */
+.learn-more {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    bottom: 70px;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #92cb6c;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #f8f7f7;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #100000;
+    border-right: 0.125rem solid #100000;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #b6b7bd;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #100000;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #100000;
+   }
+
 
 #imageOfPage {
     width: 800px;
@@ -368,3 +490,74 @@ button:hover {
     left: 80px;
     top: -80px;
 }
+
+/* 加载图标 */
+.loader {
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+  }
+  
+  .loader:before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #2a9d8f;
+    animation: loading-bounce 0.5s ease-in-out infinite alternate;
+  }
+  
+  .loader:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 7px;
+    width: 45px;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #f2f2f2, -35px 50px 0 #f2f2f2, -70px 95px 0 #f2f2f2;
+    animation: loading-step 1s ease-in-out infinite;
+  }
+  
+  @keyframes loading-bounce {
+    0% {
+      transform: scale(1, 0.7);
+    }
+  
+    40% {
+      transform: scale(0.8, 1.2);
+    }
+  
+    60% {
+      transform: scale(1, 1);
+    }
+  
+    100% {
+      bottom: 140px;
+    }
+  }
+  
+  @keyframes loading-step {
+    0% {
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0),
+              0 10px 0 #f2f2f2,
+              -35px 50px 0 #f2f2f2,
+              -70px 90px 0 #f2f2f2;
+    }
+  
+    100% {
+      box-shadow: 0 10px 0 #f2f2f2,
+              -35px 50px 0 #f2f2f2,
+              -70px 90px 0 #f2f2f2,
+              -70px 90px 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  

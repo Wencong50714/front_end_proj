@@ -212,32 +212,69 @@ footer p {
     text-align: center;
   }
 
-  button {
-    background: transparent;
-    color: #888;
-    /* 灰色字体 */
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    /* 半透明边框 */
-    border-radius: 5px;
-    /* 圆角边框 */
-    font-size: 1em;
-    padding: 10px 20px;
-    /* 调整按钮内边距 */
+/*按钮设置*/
+
+.btn {
+    --color: #96f2d8;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 12px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    overflow: hidden;
     cursor: pointer;
-    transition: color 0.3s, border-color 0.3s;
-    /* 添加过渡效果 */
-}
-
-button:hover {
-    color: #fff;
-    /* 悬停时更改字体颜色 */
-    border-color: rgba(255, 255, 255, 0.8);
-    /* 悬停时更改边框颜色 */
-}
-
-.backButton {
+    z-index: 1;
+    font-weight: 600;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
     position: absolute;
     right: 5%;
     bottom: 10%;
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
+
+   /* END 按钮设置*/
+
+.backButton {
+    
 }
 

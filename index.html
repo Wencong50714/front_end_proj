@@ -23,6 +23,9 @@
 
 <body>
     <!-- HEADER -->
+    <!-- 加载图标 -->
+    <div class="loader"></div>
+
     <div id="topNav">
         <nav id="top">
             <ul>
@@ -48,10 +51,12 @@
             </p>
         </div>
 
-        <div class="arrow">
-            <text>Scroll Down</text>
-            <i class="fa-solid fa-chevron-down fa-flip fa-lg"></i>
-        </div>
+        <button class="learn-more">
+            <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Learn More</span>
+          </button>
 
     </div>
     <!-- END PAGE CONTEN 1-->
@@ -114,7 +119,7 @@
 
             <img src="asset/image/afterImage.png" alt="after">
         </div>
-        <button id="backButton">Back to Top</button>
+        <button class="btn" id="backButton">Back to Top</button>
     </div>
 
     <!-- END PAGE CONTEN 3-->
@@ -130,6 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/Flip.min.js"></script>
     <script src="https://kit.fontawesome.com/20e1f64115.js" crossorigin="anonymous"></script>
+
     <script>
         // 打字机效果
         let words = gsap.utils.toArray(".text_words"),

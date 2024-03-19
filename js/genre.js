@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //按钮
 document.addEventListener("DOMContentLoaded", function () {
-    var backButtonList = document.querySelectorAll(".backButton");
+    var backButtonList = document.querySelectorAll(".btn");
 
     // 为每个 backButton 添加事件监听器
     backButtonList.forEach(function (backButton) {
