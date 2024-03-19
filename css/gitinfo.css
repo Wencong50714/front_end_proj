@@ -25,7 +25,7 @@ html {
 
 }
 
-.text{
+.githubText{
     width: 15em; /* 设置图片宽度 */
     height: auto; /* 保持宽高比 */
 }
@@ -41,7 +41,6 @@ html {
     flex-direction: column;
     margin: 10px;
     width: auto;
-    /* align-items: center; */
 }
 
 
@@ -64,24 +63,217 @@ html {
   }
 
   /* 按钮 */
-#githubButton {
-    background-color: #24292e; /* GitHub color */
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 210px;
-    margin: 0 20px;
-    /* right: 200px;
-    position: absolute;
-    top: 150px; */
+
+
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+  --background: #333333;
+  --color: #e8e8e8;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color);
+  padding: 0.7em 1.8em;
+  border-radius: 8px;
+  text-transform: uppercase;
+  height: 20px;
+  width: 150px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color);
+  z-index: 2;
+  margin-left: 50px;
 }
 
-#githubButton:hover {
-    background-color: #1e2226; /* Darker GitHub color on hover */
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transform-origin: -100%;
+  transform: scale(1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+.tooltip-container span:last-child {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 1;
+  background-color: var(--background);
+  z-index: -1;
+  border: 2px solid var(--background);
+  transform: scale(0);
+  transform-origin: 0;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: grid;
+  place-items: center;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.3em 0.6em;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  background: var(--background);
+  z-index: -1;
+  border-radius: 8px;
+  scale: 0;
+  transform-origin: 0 0;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  bottom: -0.2em;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+  top: -100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  scale: 1;
+  animation: shake 0.5s ease-in-out both;
+}
+
+.tooltip-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  color: white;
+  border-color: transparent;
+}
+
+.tooltip-container:hover span:last-child {
+  transform: scale(1);
+  left: 0;
+}
+
+.tooltip-container:hover .text {
+  opacity: 0;
+  top: 0%;
+  left: 100%;
+  transform: scale(0);
+}
+
+@keyframes shake {
+  0% {
+    rotate: 0;
+  }
+
+  25% {
+    rotate: 7deg;
+  }
+
+  50% {
+    rotate: -7deg;
+  }
+
+  75% {
+    rotate: 1deg;
+  }
+
+  100% {
+    rotate: 0;
+  }
+}
+
+/* github图标 */
+
+.wrapper {
+    display: flex;
+    font-family: monospace;
+  }
+  
+  .wrapper > div {
+    text-align: center;
+  }
+  
+  .wrapper > div + div {
+    border-inline-start: 1px solid #d6cfcf;
+    padding-inline-start: 15px;
+  }
+  
+  .wrapper > div > p {
+    margin-top: 15px;
+    max-width: 200px;
+  }
+  
+  .wrapper a {
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    color: #ffffff;
+    position: relative;
+  }
+  
+  .span-tooltip > i {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .span-tooltip > span {
+    position: absolute;
+    width: fit-content;
+    font-size: small;
+    font-weight: 600;
+    background-color: inherit;
+    padding: 3px 10px;
+    border-radius: 4px;
+    bottom: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .span-tooltip > span::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: inherit;
+    transform: rotate(45deg);
+    top: calc(100% - 6px);
+    left: 40%;
+  }
+  
+  .span-tooltip > i:hover + span {
+    visibility: visible;
+    opacity: 1;
+    bottom: calc(100% + 6px);
+  }
+  
+  
+  
+
 
 /* Define colors for ANSI escape codes */
 .red { 
