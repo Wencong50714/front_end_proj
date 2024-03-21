@@ -109,12 +109,13 @@ footer p {
     background-repeat: no-repeat;
     background-position: center;
     transform-origin: center;
-    transform: scale(0.5);
+    /* transform: scale(0.5); */
 }
 
+/* 加载完成后将图片缩放到正常大小 */
 .container.loaded {
     transform: scale(1);
-    /* 加载完成后将图片缩放到正常大小 */
+    
 }
 
 .content {
@@ -250,13 +251,11 @@ footer p {
     font-size: 80px;
     font-family: "Slackside One", cursive;
 }
+
 .image-container {
     position: absolute;
     overflow: hidden;
-    width: 250px;
-    /* 请替换为您希望的固定宽度 */
-    height: 300px;
-    /* 请替换为您希望的固定高度 */
+    width: 100%;
     border: 2px solid #ccc;
     /* 设置容器的边框 */
 }
@@ -269,25 +268,7 @@ footer p {
 }
 
 
-/* .left_top {
-    top: 10%;
-    left: 15%;
-}
 
-.right_bottom {
-    top: 55%;
-    left: 55%;
-}
-
-.left_bottom {
-    top: 55%;
-    left: 25%;
-}
-
-.right_top {
-    top: 10%;
-    left: 50%;
-} */
 
 /* learn-more 按钮 */
 
@@ -303,6 +284,7 @@ footer p {
     height: 60px;
     margin-top: auto;
 } */
+
 .learn-more {
     position: absolute;
     display: inline-block;
@@ -403,7 +385,7 @@ footer p {
 
 /* 叠加块 */
 
-.slider.left_top {
+.slider.one {
     position: absolute;
     width: 350px;
     height: 350px;
@@ -413,7 +395,7 @@ footer p {
     right: 350px;
 }
 
-.slider.right_bottom {
+.slider.two {
     position: absolute;
     width: 350px;
     height: 350px;

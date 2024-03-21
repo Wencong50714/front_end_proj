@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
             loaders[i].style.display = 'none';
         }
         // 添加loaded类以触发过渡效果
-        var container = document.getElementById('imageContainer');
-        container.classList.add('loaded');
+        // var container = document.getElementById('imageContainer');
+        // container.classList.add('loaded');
     });
 });
 

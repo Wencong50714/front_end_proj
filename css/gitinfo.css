@@ -79,7 +79,7 @@ html {
   border-radius: 8px;
   text-transform: uppercase;
   height: 20px;
-  width: 150px;
+  width: 160px;
   display: grid;
   place-items: center;
   border: 2px solid var(--color);
@@ -93,11 +93,16 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  display: grid;
+  display: flex;
   place-items: center;
   transform-origin: -100%;
   transform: scale(1);
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 0 10px;
+}
+
+#textIcon {
+  margin-left: 10px;
 }
 
 .tooltip-container span:last-child {
