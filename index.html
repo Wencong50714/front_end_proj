@@ -53,10 +53,10 @@
 
         <button class="learn-more">
             <span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
+                <span class="icon arrow"></span>
             </span>
             <span class="button-text">Learn More</span>
-          </button>
+        </button>
 
     </div>
     <!-- END PAGE CONTEN 1-->
@@ -94,13 +94,40 @@
 
     <!-- PAGE CONTEN 3-->
 
-    <!-- <div class="container" id="page3">
-    </div> -->
+    <div class="container" id="page3">
+        <div class="cards">
+            <div class="card c1">
+                <p class="tip">Global Pop</p>
+                <p class="second-text">Explore</p>
+            </div>
+            <div class="card c2">
+                <p class="tip">Global Rock</p>
+                <p class="second-text">Explore</p>
+            </div>
+            <div class="card c3">
+                <p class="tip">Chinese Rap</p>
+                <p class="second-text">Explore</p>
+            </div>
+            <div class="card c4">
+                <p class="tip">Chinese Pop</p>
+                <p class="second-text">Explore</p>
+            </div>
+        </div>
+    </div>
 
     <!-- END PAGE CONTEN 3-->
 
     <!-- PAGE CONTEN 4-->
-    <div class="container changeImage" id="page4">
+
+    <div class="container" id="page4">
+
+
+    </div>
+
+    <!-- END PAGE CONTEN 4-->
+
+    <!-- PAGE CONTEN 5-->
+    <div class="container changeImage" id="page5">
         <div class="afterImage">
 
             <!-- let's enjoy the music -->
@@ -117,7 +144,7 @@
         <button class="btn" id="backButton">Back to Top</button>
     </div>
 
-    <!-- END PAGE CONTEN 4-->
+    <!-- END PAGE CONTEN 5-->
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2023 Musicane. All rights reserved.</p>
@@ -167,7 +194,7 @@
 
         //滚轮图片变换
 
-        gsap.utils.toArray("#page4").forEach(section => {
+        gsap.utils.toArray("#page5").forEach(section => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: section,

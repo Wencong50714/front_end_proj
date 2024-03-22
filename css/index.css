@@ -91,10 +91,22 @@ footer p {
 
 #page2 {
     width: 100%;
-    background: linear-gradient(to bottom right, #121212 50%, #E7E7E7 50%);
+    background: linear-gradient(to bottom right, #121212 50%, rgb(249,198,45) 50%);
+}
+
+#page3 {
+    background-color: rgb(249,198,45);
+    background-image: url("../asset/index/page3Image.jpg");
+    background-position-x: right;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
 }
 
 #page4 {
+    background: linear-gradient(to bottom, rgb(249,198,45), #000000); /* 从白色到黑色的渐变 */
+}
+
+#page5 {
     background-image: url("../asset/index/equalizer-153212_1920.png");
     background-position: center;
     background-size: 100%;
@@ -540,6 +552,76 @@ footer p {
               -70px 90px 0 #f2f2f2,
               -70px 90px 0 rgba(0, 0, 0, 0);
     }
+  }
+
+  /* page2卡片 */
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    left: 10%;
+    position: absolute;
+  }
+  
+  .cards .c1 {
+    background-color: #f43f5e;
+    background-image: url("../asset/index/pop.jpeg");
+    background-position: 0% 35%;
+  }
+  
+  .cards .c2 {
+    background-color: #3b82f6;
+    background-image: url("../asset/index/rock.jpeg");
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: 100% 45%;
+  }
+  
+  .cards .c3 {
+    background-color: #22c55e;
+    background-image: url("../asset/index/Chinese\ rap.jpeg");
+    /* background-position: 100% 40%; */
+  }
+
+  .cards .c4 {
+    background-color: #36403a;
+    background-image: url("../asset/index/Chinese\ pop.jpeg");
+    background-position: 100% 55%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    width: 650px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .cards .card p.tip {
+    font-size: 2em;
+    font-weight: 500;
+  }
+  
+  .cards .card p.second-text {
+    font-size: .7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
   }
 
   
